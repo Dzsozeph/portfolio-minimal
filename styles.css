@@ -40,7 +40,7 @@
 		top: 0;
 		right: 0;
 		margin: 50px;
-	
+	    animation: slideInRight 2s ease-out forwards;
 		
 	}
 	
@@ -54,6 +54,7 @@
 		right: 5vw;
 		margin: 50px;
 		text-align: center;
+		animation: slideInLeft ease 2s;
 		
 	}
 	.background{
@@ -98,7 +99,7 @@
 		left: 38vw;
 		width: 100vw;
 		z-index: 1;
-		border-top: solid 1px white;
+		/*border-top: solid 1px white;*/
         display: flex;
 		flex-direction: column; /* EZZEL RENDEZED FÜGGŐLEGESEN */
 		
@@ -236,13 +237,14 @@ li:hover .content {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 80px;
-  opacity:0;
+  opacity: 0;
   transition: all 1s ease;
   background: #000000;
   background: linear-gradient(307deg, rgba(0, 0, 0, 1) 67%, rgba(97, 97, 97, 1) 91%, rgba(191, 191, 191, 1) 100%);
   z-index: 2;
-	border-bottom: solid 1px white;
-	border-left: solid 1px white;
+  border-bottom: solid 1px white;
+  border-left: solid 1px white;
+  margin-top: 5vh;
  
  
 }
@@ -287,7 +289,7 @@ li:hover .content {
   z-index: 2;
   border-bottom: solid 1px white;
   border-left: solid 1px white;
-	 pointer-events: none;
+  pointer-events: none;
  
  
 }
@@ -384,11 +386,11 @@ li:hover .content {
 	}
 
 .logo2{
-	top: 30vh;
+	top: 32vh;
 	left: 60vw;
 	position: fixed;
 	width: 30vw;
-	height: 55vh;
+	height: 50vh;
 	background-image: url("glass.png");
 	background-size: cover;
 	background-position: center;
@@ -418,6 +420,75 @@ li:hover .content {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+	@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(300%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+	}
+
+
+.nav-border {
+  position: fixed;
+  top: 25vh;
+  left: 30;
+  width: 70vw;
+  height: 2px;
+  background-color: #111; /* háttércsík */
+  overflow: hidden;
+  z-index: 999999;
+}
+
+.nav-border::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(17,17,17, 0) 0%,
+    #333 20%,
+    #555 40%,
+    #999 60%,
+    #ddd 80%,
+    rgba(255,255,255, 0) 100%
+  );
+  animation: sweep 5s ease-in-out infinite;
+  opacity: 1;
+}
+
+@keyframes sweep {
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    left: -100%;
+    opacity: 0;
   }
 }
 
