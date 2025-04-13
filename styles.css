@@ -17,6 +17,36 @@
 		 height: 100vh;
 		
 	}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #111; /* vagy bármi más */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 4s ease;
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-text
+{
+	font-size: 2rem;
+	font-weight: 200;
+	color: rgba(201,201,201,1.00);
+}
+
+
 	
 .red-hat-text-font {
   font-family: "Red Hat Text", sans-serif;
@@ -158,13 +188,14 @@ li:hover .content {
 		position: fixed;
 		width: 100px;
 		height: 50px;
-		top: 90vh;
+		top: 15vh;
 		border: dashed 1px #256759;
 		color:white;
 		text-align: center;
 		align-content: center;
 		cursor: grab;
-		right: 30vw;
+		right: 45vw;
+		animation: fall 2s ease-in forwards;
 	
 	}
 	
@@ -175,11 +206,22 @@ li:hover .content {
 	.content-text{
 		text-align: center;
 		font-size: 1rem;
-		
-	
-		
+
 	}
 	
+@keyframes fall {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    top: 15vh;
+    opacity: 1;
+  }
+}
 	.vonal{
 		position: fixed;
 		top: 31vh;

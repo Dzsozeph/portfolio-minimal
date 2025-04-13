@@ -12,7 +12,9 @@
 </head>
 
 <body>
-
+	<div id="preloader">
+	<div class="loader-text red-hat-text-font">Loading...</div>
+		</div>
 <div class="logo-container">
   <div class="logo luxurious-script-regular">J . J 
     <div class="logo3"></div>
@@ -127,7 +129,16 @@
 	UI/UX/full stack<br> Hungarian Front End Developer</div>
 <script>
 
-	
+	let currentSlide = 0;
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("fade-out");
+
+    // opcionálisan teljes eltávolítás az animáció után
+    setTimeout(() => {
+      preloader.remove();
+    }, 8000); // megegyezik a CSS transition idővel
+  });  
 	</script>
 </body>
 </html>
