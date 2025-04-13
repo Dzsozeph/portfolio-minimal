@@ -1,0 +1,410 @@
+@charset "utf-8";
+/* CSS Document */
+
+	*{
+		
+	
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+	
+		
+	}
+	
+	body{
+		 position: relative;
+	     width: 100vw;
+		 height: 100vh;
+		
+	}
+	
+.red-hat-text-font {
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.luxurious-script-regular {
+  font-family: "Luxurious Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+	
+	.title{
+		position: fixed;
+		padding: 10px;
+		font-size: 4.5rem;
+		font-weight: 300;
+		color:white;
+		top: 0;
+		right: 0;
+		margin: 50px;
+	
+		
+	}
+	
+	.description{
+		position: fixed;
+		padding: 10px;
+		font-size: 0.9rem;
+		font-weight: 300;
+		color:white;
+		top: 10vh;
+		right: 5vw;
+		margin: 50px;
+		text-align: center;
+		
+	}
+	.background{
+		display: flex;
+		background-color: black;
+		width: 100vw;
+		min-height: 100vh;
+		background-image: url("me.jpg");
+		background-size: 40%;
+		background-repeat: no-repeat;
+		background-position: left;
+		transition: transform 0.5s ease; /* Simítás a mozgáshoz */
+	
+	}
+
+	@media (max-width: 1650px) {
+  .background {
+    background-size: 50%; /* Növeld az arányt, hogy ne tűnjön el */
+    background-position: center left;
+  }
+}
+	
+		@media (max-width: 1350px) {
+  .background {
+    background-size: 60%; /* Növeld az arányt, hogy ne tűnjön el */
+    background-position: center left -100px;
+  }
+}
+	
+			@media (max-width: 800px) {
+  .background {
+    background-size: 100%; /* Növeld az arányt, hogy ne tűnjön el */
+    background-position: center left;
+  }
+}
+	aside{
+		
+		height: 50vh;
+		padding: 50px;
+		position: fixed;
+		top: 25vh;
+		left: 38vw;
+		width: 100vw;
+		z-index: 1;
+		border-top: solid 1px white;
+        display: flex;
+		flex-direction: column; /* EZZEL RENDEZED FÜGGŐLEGESEN */
+		
+	
+	}
+	
+	li{
+		color:white;
+		list-style: none;
+		margin: 5px;
+		cursor: pointer;
+		font-size: 1.2rem;
+	
+	}
+	ul{
+		display:none;
+		color:white; 
+		
+		
+	}
+	
+	li:hover ul{
+		display:flex;
+		
+		
+	}
+	
+	li:hover ul li{
+		display:none;
+	}
+	
+li:hover .content {
+  max-height: 60vh; /* vagy amit a tartalom igényel */
+  opacity: 1;
+  background-color: rgba(0,0,0,1);
+ 
+}
+
+.content {
+  width: 40vw;
+  position:relative;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 1s ease;
+  right: -10vw;
+  border-bottom: solid 1px white;
+  border-left: solid 1px white;
+
+	
+
+}
+	
+	.button{
+		position: fixed;
+		width: 100px;
+		height: 50px;
+		top: 90vh;
+		border: dashed 1px white;
+		color:white;
+		text-align: center;
+		align-content: center;
+		cursor: grab;
+		right: 30vw;
+	
+	}
+	
+	.button:hover {
+        background: #333;
+		border: solid 1px white;
+}
+	.content-text{
+		text-align: center;
+		font-size: 1rem;
+		
+	
+		
+	}
+	
+	.vonal{
+		position: fixed;
+		top: 31vh;
+		margin: 20px;
+		width: 0vw;
+		
+		border: solid 1px white;
+		opacity: 0;
+		z-index: 10000;
+		color:white;
+		transition: all 1s ease;
+	}
+	.vonal2{
+		position: fixed;
+		top: 35vh;
+		margin: 20px;
+		width: 0vw;
+		
+		border: solid 1px white;
+		opacity: 0;
+		z-index: 10000;
+		color:white;
+		transition: all 1s ease;
+	}
+	
+	li:hover .vonal{
+		opacity: 1;
+		width: 8vw;
+	
+	}
+	li:hover .vonal2{
+		opacity: 1;
+		width: 8vw;
+	}
+	.margin{
+  display: inline-flex; /* szép igazítás miatt */
+  align-items: center;
+  gap: 15px; /* kép és szöveg közé is */
+	}
+	
+	.works-container{
+		position: relative;
+		width: 60vw;
+		height: 60vh;
+		border: solid 1px white;
+	}
+	li:hover .grid-container{
+		opacity:1;
+		max-height: 600px;
+	}
+.grid-container {
+  max-height: 0;
+  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 80px;
+  opacity:0;
+  transition: all 1s ease;
+  background: #000000;
+  background: linear-gradient(307deg, rgba(0, 0, 0, 1) 67%, rgba(97, 97, 97, 1) 91%, rgba(191, 191, 191, 1) 100%);
+  z-index: 2;
+	border-bottom: solid 1px white;
+	border-left: solid 1px white;
+ 
+ 
+}
+
+.mini-site {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  
+}
+	
+
+.mini-site:hover {
+  transform: scale(1.03);
+}
+
+.mini-site img {
+  width:100%;
+  height: 100%;
+  display: block;
+  background-size: cover;
+  background-position: center;
+	 
+}
+
+
+	
+.grid-container2 {
+  height: 0;
+  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 80px;
+  opacity:0;
+  transition: all 1s ease;
+  background: #000000;
+  background: linear-gradient(307deg, rgba(0, 0, 0, 1) 67%, rgba(97, 97, 97, 1) 91%, rgba(191, 191, 191, 1) 100%);
+  z-index: 2;
+  border-bottom: solid 1px white;
+  border-left: solid 1px white;
+ 
+ 
+}
+	
+	.eqp{
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 16 / 14;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  
+}
+	
+
+.eqp:hover {
+  transform: scale(1.03);
+}
+
+.eqp img {
+  width:100%;
+  height: 100%;
+  display: block;
+  background-size: cover;
+  background-position: center;
+	 
+}
+		
+		
+	li:hover .grid-container2{
+		opacity:1;
+		height: 70vh;
+		
+	}
+
+.eqpdescr{
+	position: absolute;
+	width: 15vw;
+	max-height: 0;
+	color:white;
+	background-color: transparent;
+	border-bottom: solid 1px white;
+	opacity: 0;
+	font-size: 0.9rem;
+
+}
+
+	li:hover .eqpdescr{
+		opacity: 1;
+		max-height: 300px;
+		
+	}
+
+.custom-bullet::before {
+  content: "•"; /* vagy "\2022" unicode a pöttyhöz */
+  color: white; /* a pont színe */
+  font-size: 1.2em; /* méret igény szerint */
+  margin-right: 0.5em; /* térköz a pont és a szöveg között */
+}
+
+.custom-bullet {
+	position: relative;
+  display: flex;
+  align-items: center;
+	text-align: center;
+	justify-content: center;
+}
+
+.logo-container {
+  position: fixed;
+  top: 12vh;
+  left: 2vw;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+ 
+}
+
+	.logo{
+  font-size: 2rem;
+  color: white;
+  margin-top: 7vh;
+  margin-left: -0.9vw;
+	}
+
+.logo2{
+	top: 30vh;
+	left: 60vw;
+	position: fixed;
+	width: 30vw;
+	height: 60vh;
+	background-image: url("glass.png");
+	background-size: cover;
+	background-position: center;
+	transform: rotate(-76deg); /* 45 fokkal elforgatja a képet */
+	animation: lassu-forgas 120s linear infinite;
+	z-index: 1;
+	opacity: 0.7;
+}
+
+.logo3{
+	position: absolute;
+    top: -10vh;
+    left: -6vw;
+	width:15vw;
+	height: 15vh;
+	background-image: url("glass3.png");
+	background-size: cover;
+	background-position: center;
+	transform: rotate(-25deg); /* 45 fokkal elforgatja a képet */
+	z-index: 1;
+	opacity: 0.7;
+}
+
+@keyframes lassu-forgas {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
