@@ -437,7 +437,7 @@ li:hover .content {
 
 @keyframes slideInRight {
   from {
-    transform: translateX(300%);
+    transform: translateX(200%);
     opacity: 0;
   }
   to {
