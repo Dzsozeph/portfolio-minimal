@@ -12,14 +12,18 @@
 </head>
 
 <body>
+	<div class="logobackground"></div>
+	<div id="cursor-circle"></div>
 	<div id="preloader">
 	<div class="loader-text red-hat-text-font">Loading...</div>
 		</div>
 <div class="logo-container">
+	
   <div class="logo luxurious-script-regular">J . J 
     <div class="logo3"></div>
   </div>
 </div>
+	
 	      <div class="logo2"></div>
 			
 	<aside class="red-hat-text-font">
@@ -139,6 +143,13 @@
       preloader.remove();
     }, 8000); // megegyezik a CSS transition idővel
   });  
+	
+		
+	document.addEventListener('mousemove', function(e) {
+    const circle = document.getElementById('cursor-circle');
+    circle.style.left = e.pageX + 'px';
+    circle.style.top = e.pageY + 'px';
+});
 	</script>
 </body>
 </html>
