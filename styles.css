@@ -196,6 +196,9 @@ box-shadow: 0 0 120px #0CB6A5;
 	}
 	.button{
 		left: 30px;
+		width: 90px !important;
+		white-space: normal;
+		font-size: 0.75rem;
 	}
 	
 	.logo-container{
