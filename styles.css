@@ -219,6 +219,9 @@ box-shadow: 0 0 120px #0CB6A5;
 	.title{
 		font-size: 3rem !important;
 	}
+	#cursor-circle{
+		display: none;
+	}
 }
 @media (max-width: 1250px) {
 	h1{
