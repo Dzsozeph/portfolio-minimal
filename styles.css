@@ -138,8 +138,8 @@ box-shadow: 0 0 120px #0CB6A5;
   }
 		
 		.nav-border{
-		    width: 65vw !important;
-			margin-left: 5vw !important;
+			left: 45vw !important;
+			width: 50vw !important;
 		}
 }
 
@@ -148,11 +148,11 @@ box-shadow: 0 0 120px #0CB6A5;
     background-size: 70%; 
     background-position: center left;
   }
+	     
+
 		
 		aside{
 		opacity: 0;
-		
-		
 		}
 }
 	
@@ -208,9 +208,16 @@ box-shadow: 0 0 120px #0CB6A5;
 	}
 	
 	.nav-border{
-		top: -5vh !important;
-		display: block !important;
-		position: absolute !important;
+	    padding: 1px !important;
+		position: fixed !important;
+		top: -55vh !important;
+		left: 20vw !important;
+		width: 100% !important;
+
+	}
+	
+	.title{
+		font-size: 3rem !important;
 	}
 }
 @media (max-width: 1250px) {
@@ -224,8 +231,8 @@ box-shadow: 0 0 120px #0CB6A5;
 	
 	.nav-border{
 
-		position: fixed;
-		margin-top: 90vh;
+		
+		margin-top: 60vh !important;
 	
 	}
 	
