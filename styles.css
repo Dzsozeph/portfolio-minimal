@@ -15,7 +15,7 @@
 		 position: relative;
 	     width: 100vw;
 		 height: 100vh;
-		 overflow: hidden;
+		 overflow: scroll;
 		 background-color: black;
 		
 	}
@@ -218,6 +218,7 @@ box-shadow: 0 0 120px #0CB6A5;
 	
 	.title{
 		font-size: 3rem !important;
+		white-space: nowrap;
 	}
 	#cursor-circle{
 		display: none;
@@ -235,7 +236,7 @@ box-shadow: 0 0 120px #0CB6A5;
 	.nav-border{
 
 		
-		margin-top: 60vh !important;
+		margin-top: 55vh !important;
 	
 	}
 	
