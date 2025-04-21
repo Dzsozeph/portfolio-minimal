@@ -177,7 +177,7 @@ box-shadow: 0 0 120px #0CB6A5;
 
 @media (max-width: 500px) {
 	.logo2{
-		top: 64vh !important;
+		top: 62vh !important;
 		width: 40vw !important;
 		height: 30vh !important;
 		left: 40vw !important;
@@ -241,7 +241,7 @@ box-shadow: 0 0 120px #0CB6A5;
 	}
 	
 	.button{
-		margin-top: 70vh !important;
+		margin-top: 69vh !important;
 		z-index: -1;
 		
 		
