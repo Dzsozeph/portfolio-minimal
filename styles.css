@@ -177,10 +177,10 @@ box-shadow: 0 0 120px #0CB6A5;
 
 @media (max-width: 500px) {
 	.logo2{
-		top: 62vh !important;
-		width: 40vw !important;
-		height: 30vh !important;
-		left: 40vw !important;
+		top: 66vh !important;
+		width: 30vw !important;
+		height: 20vh !important;
+		left: 50vw !important;
 		
 	}
 	
@@ -195,10 +195,13 @@ box-shadow: 0 0 120px #0CB6A5;
 		margin-top: 15vh;
 	}
 	.button{
+		position: absolute;
 		left: 30px;
 		width: 90px !important;
 		white-space: normal;
 		font-size: 0.75rem;
+		animation: fall 2s ease-in forwards !important;
+		margin: 20px;
 	}
 	
 	.logo-container{
