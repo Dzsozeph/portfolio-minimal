@@ -188,8 +188,8 @@ box-shadow: 0 0 120px #0CB6A5;
 	
 	
 	.logo3{
-		left: 65vw!important;
-		top: 35vh !important;
+		left: 0 !important;
+		top: 0 !important;
 		opacity: 1 !important;
 		width: 70px !important;
 		height: 70px !important;
@@ -224,6 +224,12 @@ box-shadow: 0 0 120px #0CB6A5;
 		top: -49vh !important;
 		left: 20vw !important;
 		width: 100% !important;
+
+	}
+	
+	.nav-border2{
+		position: fixed !important;
+        bottom: 7vh !important;
 
 	}
 	
@@ -742,4 +748,105 @@ li:hover .content {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+.background-line {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  width: 100vw;
+  height: 1px;
+  background: linear-gradient(90deg, #00ffcc, #9933ff, #00ffcc);
+  background-size: 400% 100%;
+  animation: moveGradient2 5s linear infinite;
+  box-shadow: 0 0 12px #00ffcc88, 0 0 24px #9933ff55;
+}
+
+@keyframes moveGradient2 {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.nav-border2 {
+  position: relative;
+  bottom: 2.5%;
+  width: 100%;
+  height: 10px;
+  background-color: #111; /* háttércsík */
+  overflow: hidden;
+  z-index: 999999;
+  
+}
+
+.nav-border2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0; /* fix bal oldalon */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    -90deg, /* irány visszafelé */
+    rgba(255,255,255, 0) 0%,
+    #D751FB 20%,
+    #999 40%,
+    #555 60%,
+    #256759 80%,
+    rgba(17,17,17, 0) 100%
+  );
+  animation: sweep2 5s ease-in-out infinite;
+  animation-delay: 2.5s; /* 1 másodperc késleltetés */
+ opacity: 0; /* Kezdetben rejtett */
+  visibility: hidden; /* Az elem ténylegesen nem látható */
+  z-index: 999999;
+}
+
+@keyframes sweep2 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden; /* Az animáció előtt nem látható */
+  }
+  40% {
+    opacity: 1;
+    visibility: visible; /* Láthatóvá válik */
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden; /* Az animáció végén ismét rejtett */
+  }
+}
+
+@media (max-width: 768px) {
+  .gradient-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .moving-gradient {
+    background-size: 500% 500%; /* Növeld a háttér méretét a kisebb képernyőkön */
+    opacity: 0.15; /* Kevésbé áttetsző mobilon, hogy jobban illeszkedjen */
+  }
+}
+
+@media (max-width: 500px) {
+  .gradient-container {
+    position: fixed; /* Biztosítja, hogy a képernyőn maradjon */
+    top: 0;
+    left: 0;
+    height: 100vh; /* A teljes magasságot kitölti */
+    width: 100vw;  /* A teljes szélességet kitölti */
+    z-index: 9999; /* Minden más elé */
+    pointer-events: none; /* Ne zavarja a kattintásokat */
+  }
+
+  .moving-gradient {
+    background-size: 500% 500%; /* Növeli a háttér méretét a kisebb képernyőkön */
+    opacity: 0.15; /* Kevésbé áttetsző mobilon */
+  }
 }
