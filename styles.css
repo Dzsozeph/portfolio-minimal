@@ -229,7 +229,7 @@ box-shadow: 0 0 120px #0CB6A5;
 	
 	.nav-border2{
 		position: fixed !important;
-        bottom: 7vh !important;
+        bottom: 0 !important;
 
 	}
 	
