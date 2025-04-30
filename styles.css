@@ -15,7 +15,7 @@
 		 position: relative;
 	     width: 100vw;
 		 height: 100vh;
-		 overflow: scroll;
+		 overflow: hidden;
 		 background-color: black;
 		
 	}
