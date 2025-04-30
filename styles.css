@@ -179,7 +179,7 @@ box-shadow: 0 0 120px #0CB6A5;
 
 @media (max-width: 500px) {
 	.logo2{
-		top: 25vh !important;
+		top: 27vh !important;
 		width: 30vw !important;
 		height: 20vh !important;
 		left: 50vw !important;
@@ -200,12 +200,12 @@ box-shadow: 0 0 120px #0CB6A5;
 	}
 	.button{
 		position: absolute;
-		left: 30px;
+		right: 30px;
 		width: 90px !important;
 		white-space: normal;
 		font-size: 0.75rem;
 		animation: fall 2s ease-in forwards !important;
-		margin: 30px;
+		margin-top: 60px;
 		z-index: 2;
 	}
 	
