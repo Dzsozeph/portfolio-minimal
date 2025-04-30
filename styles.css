@@ -179,7 +179,7 @@ box-shadow: 0 0 120px #0CB6A5;
 
 @media (max-width: 500px) {
 	.logo2{
-		top: 66vh !important;
+		top: 25vh !important;
 		width: 30vw !important;
 		height: 20vh !important;
 		left: 50vw !important;
