@@ -15,7 +15,7 @@
 		 position: relative;
 	     width: 100vw;
 		 height: 100vh;
-		 overflow: hidden;
+	
 		 background-color: black;
 		
 	}
@@ -91,7 +91,7 @@ box-shadow: 0 0 120px #0CB6A5;
 
 	
 	.title{
-		position: fixed;
+		position: absolute;
 		padding: 10px;
 		font-size: 4.5rem;
 		font-weight: 300;
@@ -104,7 +104,7 @@ box-shadow: 0 0 120px #0CB6A5;
 	}
 	
 	.description{
-		position: fixed;
+		position: absolute;
 		padding: 10px;
 		font-size: 0.9rem;
 		font-weight: 300;
@@ -122,7 +122,7 @@ box-shadow: 0 0 120px #0CB6A5;
 		background-color: black;
 		width: 100vw;
 		min-height: 100vh;
-		background-image: url("me.jpg");
+		background-image: url("me3.png");
 		background-size: 40%;
 		background-repeat: no-repeat;
 		background-position: left;
@@ -220,7 +220,7 @@ box-shadow: 0 0 120px #0CB6A5;
 	
 	.nav-border{
 	    padding: 1px !important;
-		position: fixed !important;
+		position: absolute!important;
 		top: -49vh !important;
 		left: 20vw !important;
 		width: 100% !important;
@@ -228,7 +228,7 @@ box-shadow: 0 0 120px #0CB6A5;
 	}
 	
 	.nav-border2{
-		position: fixed !important;
+		position: absolute!important;
         bottom: 0 !important;
 
 	}
@@ -278,7 +278,7 @@ box-shadow: 0 0 120px #0CB6A5;
 		
 		height: 50vh;
 		padding: 50px;
-		position: fixed;
+		position: absolute;
 		top: 25vh;
 		left: 38vw;
 		width: 100vw;
@@ -345,7 +345,7 @@ li:hover .content {
 }
 	
 	.button{
-		position: fixed;
+		position: absolute;
 		width: 100px;
 		height: 50px;
 		top: 15vh;
@@ -438,7 +438,7 @@ li:hover .content {
 	}
 .grid-container {
   max-height: 0;
-  position: fixed;
+  position: absolute;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -596,7 +596,7 @@ li:hover .content {
 .logo2{
 	top: 35vh;
 	left: 60vw;
-	position: fixed;
+	position: absolute;
 	width: 30vw;
 	height: 50vh;
 	background-image: url("glass.png");
@@ -654,7 +654,7 @@ li:hover .content {
 	}
 
 .nav-border {
-  position: fixed;
+  position: absolute;
   top: 25vh;
   left: 33vw;
   width: 70vw;
@@ -700,18 +700,6 @@ li:hover .content {
 }
 
 
-.photographer{
-	position: fixed;
-	border: solid 2px white;
-	width: 100px;
-	height: 100px;
-	margin: 0 auto;
-	right: 10vw;
-	bottom: 10vh;
-	background-color: transparent;
-	color: white;
-	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
 
 .underline{
 	border-bottom: solid 1px grey;
@@ -731,17 +719,18 @@ li:hover .content {
   background: linear-gradient(
     270deg,
     #000000 0%,
-    #28B08E 20%,
-    #000000 40%,
+    #038262 20%,
+	#0D362B 30%,
+    #111111 40%,
     #000000 60%,
     #D751FB 80%,
     #000000 100%
   );
   background-size: 400% 400%;
-  animation: moveGradient 60s linear infinite;
-  opacity: 0.1;
+  animation: moveGradient 30s linear infinite;
+  opacity: 0.150;
 	pointer-events: none;
-	z-index: 1;
+	z-index: -1;
 }
 
 @keyframes moveGradient {
@@ -773,7 +762,7 @@ li:hover .content {
 
 .nav-border2 {
   position: relative;
-  bottom: 2.5%;
+  bottom: 1%;
   width: 100%;
   height: 10px;
   background-color: #111; /* háttércsík */
@@ -850,3 +839,30 @@ li:hover .content {
     opacity: 0.15; /* Kevésbé áttetsző mobilon */
   }
 }
+
+.page2{
+	width: 100vw;
+	height: 100vh;
+	background: #02543F;
+background: linear-gradient(0deg, rgba(2, 84, 63, 1) 0%, rgba(1, 35, 26, 1) 5%, rgba(0, 0, 0, 1) 70%);
+}
+
+.photographer{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+	right: 65vw;
+	bottom: 6vh;
+	background-color: transparent;
+	color: white;
+	background-image: url("photo.png");
+	background-size: contain;
+	background-position: center;
+	border-radius: 50%;
+	
+}
+
+.photographer:hover {
+	transform: scale(1.2);
+	}
