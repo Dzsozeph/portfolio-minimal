@@ -15,7 +15,7 @@
 		 position: relative;
 	     width: 100vw;
 		 height: 100vh;
-	
+	     overflow: hidden;
 		 background-color: black;
 		
 	}
@@ -93,11 +93,11 @@ box-shadow: 0 0 120px #0CB6A5;
 	.title{
 		position: absolute;
 		padding: 10px;
-		font-size: 4.5rem;
+		font-size: 6rem !important;
 		font-weight: 300;
 		color:white;
 		top: 0;
-		right: 0;
+		right: 15vw !important;
 		margin: 50px;
 	    animation: slideInRight 2s ease-out forwards;
 		
@@ -110,10 +110,11 @@ box-shadow: 0 0 120px #0CB6A5;
 		font-weight: 300;
 		color:white;
 		top: 10vh;
-		right: 5vw;
 		margin: 50px;
+		right: 30vw;
 		text-align: center;
 		animation: slideInLeft ease 2s;
+		
 		
 	}
 
@@ -188,11 +189,11 @@ box-shadow: 0 0 120px #0CB6A5;
 	
 	
 	.logo3{
-		left: 0 !important;
 		top: 0 !important;
 		opacity: 1 !important;
-		width: 50px !important;
-		height: 50px !important;
+        width: 20vw !important;
+		height: 9.5vh !important;
+
 	}
 	
 	.background{
