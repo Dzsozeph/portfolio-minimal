@@ -179,10 +179,10 @@ box-shadow: 0 0 120px #0CB6A5;
 
 @media (max-width: 500px) {
 	.logo2{
-		top: 27vh !important;
+		top: 15vh !important;
 		width: 30vw !important;
 		height: 20vh !important;
-		left: 50vw !important;
+		left: 62vw !important;
 		
 	}
 	
@@ -196,16 +196,17 @@ box-shadow: 0 0 120px #0CB6A5;
 	}
 	
 	.background{
+		background-size: 100% !important;
 		margin-top: 15vh;
 	}
 	.button{
-		position: absolute;
-		right: 30px;
+	   
+		margin: 0 auto !important;
 		width: 90px !important;
 		white-space: normal;
 		font-size: 0.75rem;
 		animation: fall 2s ease-in forwards !important;
-		margin-top: 60px;
+		margin-top: 10vh !important;
 		z-index: 2;
 	}
 	
@@ -229,7 +230,7 @@ box-shadow: 0 0 120px #0CB6A5;
 	
 	.nav-border2{
 		position: absolute!important;
-        bottom: 0 !important;
+        bottom: 1.5% !important;
 
 	}
 	
@@ -379,7 +380,7 @@ li:hover .content {
     opacity: 1;
   }
   100% {
-    top: 15vh;
+    top: 23vh;
     opacity: 1;
   }
 }
@@ -713,7 +714,7 @@ li:hover .content {
 
 }
 .moving-gradient {
-	position: absolute;
+  position: absolute;
   width: 100%;
   height: 100vh;
   background: linear-gradient(
@@ -729,8 +730,8 @@ li:hover .content {
   background-size: 400% 400%;
   animation: moveGradient 30s linear infinite;
   opacity: 0.150;
-	pointer-events: none;
-	z-index: -1;
+  pointer-events: none;
+  z-index: -1;
 }
 
 @keyframes moveGradient {
@@ -833,18 +834,24 @@ li:hover .content {
     z-index: 9999; /* Minden más elé */
     pointer-events: none; /* Ne zavarja a kattintásokat */
   }
+	.photographer{
+		right: 10vw !important;
+	}
 
   .moving-gradient {
     background-size: 500% 500%; /* Növeli a háttér méretét a kisebb képernyőkön */
     opacity: 0.15; /* Kevésbé áttetsző mobilon */
   }
 }
+.title{
+	position: absolute;
+	right: 10%;
+	font-size: 3rem !important;
+}
 
-.page2{
-	width: 100vw;
-	height: 100vh;
-	background: #02543F;
-background: linear-gradient(0deg, rgba(2, 84, 63, 1) 0%, rgba(1, 35, 26, 1) 5%, rgba(0, 0, 0, 1) 70%);
+.description{
+position: absolute;
+	right: 20%;
 }
 
 .photographer{
