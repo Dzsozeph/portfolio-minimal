@@ -205,7 +205,7 @@ box-shadow: 0 0 120px #0CB6A5;
 		width: 90px !important;
 		white-space: normal;
 		font-size: 0.75rem;
-		animation: fall 2s ease-in forwards !important;
+		animation: fall2 2s ease-in forwards !important;
 		margin-top: 10vh !important;
 		z-index: 2;
 	}
@@ -349,7 +349,6 @@ li:hover .content {
 		position: absolute;
 		width: 100px;
 		height: 50px;
-		top: 15vh;
 		border: dashed 1px #256759;
 		color:white;
 		text-align: center;
@@ -380,7 +379,21 @@ li:hover .content {
     opacity: 1;
   }
   100% {
-    top: 23vh;
+    top: 15vh;
+    opacity: 1;
+  }
+}
+
+@keyframes fall2 {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    top: 22vh;
     opacity: 1;
   }
 }
