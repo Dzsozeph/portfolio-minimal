@@ -100,6 +100,7 @@ box-shadow: 0 0 120px #0CB6A5;
 		right: 15vw !important;
 		margin: 50px;
 	    animation: slideInRight 2s ease-out forwards;
+		white-space: nowrap !important;
 		
 	}
 	
@@ -180,10 +181,10 @@ box-shadow: 0 0 120px #0CB6A5;
 
 @media (max-width: 500px) {
 	.logo2{
-		top: 15vh !important;
-		width: 30vw !important;
+		top: 20vh !important;
+		width: 20vw !important;
 		height: 20vh !important;
-		left: 62vw !important;
+		left: 66vw !important;
 		
 	}
 	
@@ -199,6 +200,7 @@ box-shadow: 0 0 120px #0CB6A5;
 	.background{
 		background-size: 100% !important;
 		margin-top: 15vh;
+		right: 10vw;
 	}
 	.button{
 	   
@@ -231,19 +233,20 @@ box-shadow: 0 0 120px #0CB6A5;
 	
 	.nav-border2{
 		position: absolute!important;
-        bottom: 1.5% !important;
+        bottom: 0 !important;
 
 	}
 	
 	.title{
 		font-size: 2.5rem !important;
-		white-space: nowrap;
+		white-space: nowrap !important;
+		left: 0 !important;
 	}
 	#cursor-circle{
 		display: none;
 	}
 }
-@media (max-width: 1250px) {
+@media (max-width: 1350px) {
 	h1{
 		font-size: 20rem;
 	}
@@ -252,19 +255,7 @@ box-shadow: 0 0 120px #0CB6A5;
 		font-size:3.5rem;
 	}
 	
-	.nav-border{
 
-		
-		margin-top: 55vh !important;
-	
-	}
-	
-	.button{
-		margin-top: 69vh !important;
-		z-index: -1;
-		
-		
-	}
 	.logo2{
 		display: block;
 		max-width: 40vw !important;
@@ -273,7 +264,15 @@ box-shadow: 0 0 120px #0CB6A5;
 		z-index: 99999;
 	}
 }
-
+	
+@media (max-width: 1550px) {
+	
+	.button{
+		margin-top: 69vh !important;
+		z-index: -1;
+		
+		}
+	}
 
 	
 	aside{
@@ -281,7 +280,7 @@ box-shadow: 0 0 120px #0CB6A5;
 		height: 50vh;
 		padding: 50px;
 		position: absolute;
-		top: 25vh;
+		top: 35vh;
 		left: 38vw;
 		width: 100vw;
 		z-index: 2;
@@ -355,7 +354,7 @@ li:hover .content {
 		text-align: center;
 		align-content: center;
 		cursor: grab;
-		right: 45vw;
+		left: 45vw;
 		animation: fall 2s ease-in forwards;
 		z-index: 99999;
 	
@@ -670,7 +669,7 @@ li:hover .content {
 
 .nav-border {
   position: absolute;
-  top: 25vh;
+  top: 30vh;
   left: 33vw;
   width: 70vw;
   height: 2px;
@@ -859,13 +858,14 @@ li:hover .content {
 }
 .title{
 	position: absolute;
-	right: 10%;
 	font-size: 3rem !important;
+	top: 50px !important;
 }
 
 .description{
 position: absolute;
-	right: 20%;
+right: 20%;
+top: 150px !important;
 }
 
 .photographer{
