@@ -181,7 +181,7 @@ box-shadow: 0 0 120px #0CB6A5;
 
 @media (max-width: 500px) {
 	.logo2{
-		top: 20vh !important;
+		top: 25vh !important;
 		width: 20vw !important;
 		height: 20vh !important;
 		left: 66vw !important;
@@ -849,6 +849,8 @@ li:hover .content {
   }
 	.photographer{
 		right: 10vw !important;
+		width: 30px !important;
+		height: 30px !important;
 	}
 
   .moving-gradient {
