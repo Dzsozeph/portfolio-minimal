@@ -43,10 +43,33 @@
 
 .loader-text
 {
-	font-size: 2rem;
-	font-weight: 200;
-	color: rgba(201,201,201,1.00);
+	
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    #AB36FF,
+	#fc72ff,
+    #8f68ff,
+    #487bff,
+    #128766
+  
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 2.5s linear infinite;
 }
+
+@keyframes animate-gradient {
+  to {
+    background-position: 200%;
+  }
+}
+
+
 
 #cursor-circle {
     position: absolute;
@@ -89,20 +112,52 @@ box-shadow: 0 0 120px #0CB6A5;
   font-style: normal;
 }
 
-	
+.gruppo-regular {
+  font-family: "Gruppo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.ballet-font {
+  font-family: "Ballet", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 	.title{
 		position: absolute;
 		padding: 10px;
-		font-size: 6rem !important;
 		font-weight: 300;
 		color:white;
 		top: 0;
-		right: 15vw !important;
+		right: 13vw !important;
 		margin: 50px;
-	    animation: slideInRight 2s ease-out forwards;
 		white-space: nowrap !important;
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    #8f68ff,
+    #6656A6,
+	  #1A664B,
+    #1FCC92,
+	  #1FCC92,
+	  #266E59,
+	  #8967C7
+  
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 10s linear infinite, slideInRight 2s ease-out forwards;
+}
+
+@keyframes animate-gradient {
+  to {
+    background-position: 200%;
+  }
+}
+
 		
-	}
 	
 	.description{
 		position: absolute;
@@ -124,7 +179,7 @@ box-shadow: 0 0 120px #0CB6A5;
 		background-color: black;
 		width: 100vw;
 		min-height: 100vh;
-		background-image: url("me3.png");
+		background-image: url("metest.png");
 		background-size: 40%;
 		background-repeat: no-repeat;
 		background-position: left;
@@ -132,6 +187,7 @@ box-shadow: 0 0 120px #0CB6A5;
 		top: -10vh;
 		position: absolute;
 		z-index: -1;
+	
 	
 	}
 
@@ -209,7 +265,7 @@ box-shadow: 0 0 120px #0CB6A5;
 		white-space: normal;
 		font-size: 0.75rem;
 		animation: fall2 2s ease-in forwards !important;
-		margin-top: 10vh !important;
+		margin-top: 80vh !important;
 		z-index: 2;
 	}
 	
@@ -283,7 +339,7 @@ box-shadow: 0 0 120px #0CB6A5;
 		top: 35vh;
 		left: 38vw;
 		width: 100vw;
-		z-index: 2;
+		z-index: 999999;
 		/*border-top: solid 1px white;*/
         display: flex;
 		flex-direction: column; /* EZZEL RENDEZED FÜGGŐLEGESEN */
@@ -304,6 +360,8 @@ box-shadow: 0 0 120px #0CB6A5;
 li:hover{
 	font-size: 1.6rem;
 	transition: all 0.3s ease;
+	color: rgba(38,180,138,1.00);
+	
 }
 	ul{
 		display:none;
@@ -325,8 +383,10 @@ li:hover{
 li:hover .content {
   max-height: 60vh; 
   opacity: 1;
-  background-color: rgba(0,0,0,0.7);
-  box-shadow: 0 3px 3px 0 #32B896;
+  background: #128766;
+background: linear-gradient(300deg, rgba(18, 135, 102, 0.4) 0%, rgba(14, 106, 80, 0.4) 0%, rgba(12, 88, 67, 0.4) 6%, rgba(9, 67, 51, 0.4) 8%, rgba(0, 0, 0, 0.4) 13%, rgba(22, 46, 39, 0.4) 62%, rgba(0, 0, 0, 0.4) 100%);
+
+  box-shadow: 1px 1px  0 #32B896;
 
  
 }
@@ -354,7 +414,7 @@ li:hover .content {
 		text-align: center;
 		align-content: center;
 		cursor: grab;
-		left: 45vw;
+		left: 40vw;
 		animation: fall 2s ease-in forwards;
 		z-index: 99999;
 	
@@ -367,6 +427,8 @@ li:hover .content {
 	.content-text{
 		text-align: center;
 		font-size: 1rem;
+		text-shadow: 2px 2px 3px black;
+		color: white;
 
 	}
 	
@@ -467,7 +529,7 @@ li:hover .vonal3{
 	}
 	li:hover .grid-container{
 		opacity:1;
-		max-height: 600px;
+		max-height: 800px;
 	}
 .grid-container {
   max-height: 0;
@@ -475,7 +537,7 @@ li:hover .vonal3{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 30px;
+  padding: 50px;
   opacity: 0;
   transition: all 1s ease;
 background: #128766;
@@ -484,13 +546,21 @@ background: linear-gradient(300deg, rgba(18, 135, 102, 0.4) 0%, rgba(14, 106, 80
   z-index: 2;
   margin-top: -10vh;
   left: 15vw;
-	 box-shadow: 0 3px 3px 0 #32B896;
+ box-shadow: 0 3px 3px 0 #32B896;
 	
  
 }
 
+.grid-container-popup{
+  clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 40px 60px rgba(0, 0, 0, 0.5);
+  transform: perspective(1000px) rotateX(5deg);
+  transition: all 0.4s ease;
+}
+
 .mini-site {
-  border: 1px solid #ddd;
+  border: 1px solid #3C8C68;
   border-radius: 10px;
   overflow: hidden;
   aspect-ratio: 16 / 9;
@@ -503,6 +573,8 @@ background: linear-gradient(300deg, rgba(18, 135, 102, 0.4) 0%, rgba(14, 106, 80
 
 .mini-site:hover {
   transform: scale(1.03);
+  border-color: mediumpurple;
+  
 }
 
 .mini-site img {
@@ -628,7 +700,7 @@ background: linear-gradient(300deg, rgba(18, 135, 102, 0.4) 0%, rgba(14, 106, 80
 	}
 */
 .logo2{
-	top: 35vh;
+	top: 40vh;
 	left: 60vw;
 	position: absolute;
 	width: 30vw;
@@ -741,9 +813,10 @@ background: linear-gradient(300deg, rgba(18, 135, 102, 0.4) 0%, rgba(14, 106, 80
 }
 
 .gradient-container{
-	position: relative;
+	position: fixed;
 	height: 100%;
 	width: 100%;
+	z-index: 0;
 
 }
 .moving-gradient {
@@ -761,14 +834,15 @@ background: linear-gradient(300deg, rgba(18, 135, 102, 0.4) 0%, rgba(14, 106, 80
     #000000 100%
   );
   background-size: 400% 400%;
-  animation: moveGradient 30s linear infinite;
-  opacity: 0.150;
+  animation: moveGradient 40s linear infinite;
+  opacity: 0.080;
   pointer-events: none;
-  z-index: -1;
+  z-index: 1;
 }
 
 @keyframes moveGradient {
-  0% { background-position: 0% 50%; }
+  0% { background-position: 0% 25%; }
+  25% {background-position: 25% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
@@ -796,7 +870,6 @@ background: linear-gradient(300deg, rgba(18, 135, 102, 0.4) 0%, rgba(14, 106, 80
 
 .nav-border2 {
   position: fixed;
-  bottom: 1%;
   width: 100%;
   height: 10px;
   background-color: #111; /* háttércsík */
@@ -910,3 +983,50 @@ top: 150px !important;
 .photographer:hover {
 	transform: scale(1.2);
 	}
+
+.socialmedia-bar{
+	position: absolute;
+	top: 1vh;
+	right: 15vh;
+	width: 5vw;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 10px;
+	z-index: 1;
+	}
+	.social-icon img {
+    width: 30px; /* Az ikonok szélessége a bar szélességének megfelelően */
+    margin-right: 25px; /* Függőleges térköz az ikonok között */
+    transition: transform 0.3s; /* Animáció a hover effektushoz */
+	z-index: 1;
+		
+}
+	
+	.social-icon img:hover {
+	box-shadow: 0 0 30px #187057;
+	border-radius: 40px;
+}
+.social-icon img:hover {
+    transform: scale(1.1); /* Ikonok nagyítása hover esetén */
+}
+
+.content2{
+	position: relative;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	margin: 0 auto;
+	
+	
+}
+
+.content2 h1 {
+    font-size: 4rem;
+	margin: 10px;
+}
+.michroma-regular {
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
