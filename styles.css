@@ -335,7 +335,7 @@ box-shadow: 0 0 120px #0CB6A5;
 		
 		height: 50vh;
 		padding: 50px;
-		position: absolute;
+		position: relative;
 		top: 35vh;
 		left: 38vw;
 		width: 100vw;
