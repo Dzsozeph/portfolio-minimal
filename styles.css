@@ -338,7 +338,7 @@ box-shadow: 0 0 120px #0CB6A5;
 		position: relative;
 		top: 35vh;
 		left: 38vw;
-		width: 100vw;
+		width: 30vw;
 		z-index: 1;
 		/*border-top: solid 1px white;*/
         display: flex;
@@ -381,24 +381,31 @@ li:hover{
 	}
 	
 li:hover .content {
-  max-height: 60vh; 
+  max-height: 100vh; 
   opacity: 1;
-  background: #128766;
-background: linear-gradient(300deg, rgba(18, 135, 102, 0.4) 0%, rgba(14, 106, 80, 0.4) 0%, rgba(12, 88, 67, 0.4) 6%, rgba(9, 67, 51, 0.4) 8%, rgba(0, 0, 0, 0.4) 13%, rgba(22, 46, 39, 0.4) 62%, rgba(0, 0, 0, 0.4) 100%);
-
-  box-shadow: 1px 1px  0 #32B896;
+  /*background: #128766;
+background: linear-gradient(300deg, rgba(18, 135, 102, 0.4) 0%, rgba(14, 106, 80, 0.4) 0%, rgba(12, 88, 67, 0.4) 6%, rgba(9, 67, 51, 0.4) 8%, rgba(0, 0, 0, 0.4) 13%, rgba(22, 46, 39, 0.4) 62%, rgba(0, 0, 0, 0.4) 100%);*/
+	background-image: linear-gradient(to right, #ff00cc, #3333ff);
+    background-repeat: no-repeat;
+    background-size: 100% 3px; /* szélesség 100%, magasság 2px */
+    background-position: bottom left;
+	border-left: solid 1px rgba(6,138,90,1.00);
+	border-right: solid 1px rgba(6,138,90,1.00);
+	padding: 20px;
+	background-color: 0.5 black;
+	
 
  
 }
 
 .content {
   width: 40vw;
-  position:relative;
+  position:fixed;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   transition: all 1s ease;
-  right: -10vw;
+  right: 10vw;
   z-index: 2;
   
 	
@@ -423,6 +430,7 @@ background: linear-gradient(300deg, rgba(18, 135, 102, 0.4) 0%, rgba(14, 106, 80
 	.button:hover {
         background: #333;
 		border: solid 1px #D751FB;
+		color: #28BF92;
 }
 	.content-text{
 		text-align: center;
@@ -434,14 +442,14 @@ background: linear-gradient(300deg, rgba(18, 135, 102, 0.4) 0%, rgba(14, 106, 80
 	
 @keyframes fall {
   0% {
-    top: -100px;
+    top: -300px;
     opacity: 0;
   }
   30% {
     opacity: 1;
   }
   100% {
-    top: 15vh;
+    top: 13vh;
     opacity: 1;
   }
 }
@@ -710,7 +718,7 @@ background: linear-gradient(300deg, rgba(18, 135, 102, 0.4) 0%, rgba(14, 106, 80
 	background-position: center;
 	transform: rotate(-76deg); 
 	animation: lassu-forgas 120s linear infinite;
-	z-index: 2;
+	z-index: 1;
 	opacity: 1;
 }
 
@@ -1004,7 +1012,7 @@ top: 150px !important;
 }
 	
 	.social-icon img:hover {
-	box-shadow: 0 0 30px #187057;
+	box-shadow: 0 0 40px #A16FDE;
 	border-radius: 40px;
 }
 .social-icon img:hover {
