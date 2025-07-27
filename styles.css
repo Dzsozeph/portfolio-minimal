@@ -1388,3 +1388,31 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 	
 }
 
+.journey-start-button
+{
+	position: fixed;
+	width: 10vw;
+	background: #20c7a0;
+background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1) 89%);
+	display: flex;
+	top: 30vh;
+	right:30vw;
+	padding: 10px;
+	cursor: grab;
+
+	
+	
+}
+
+.journey-start-button a{
+	font-size: 1rem;
+	text-align: center;
+	margin: 0 auto;
+	color: white;
+	font-family:  Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+}
+.felipa-regular {
+  font-family: "Felipa", serif;
+  font-weight: 400;
+  font-style: normal;
+}
