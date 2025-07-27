@@ -8,14 +8,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Gruppo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Gruppo&display=swap" rel="stylesheet">
 <link href="styles.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Luxurious+Script&family=Michroma&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Luxurious+Script&family=Michroma&display=swap" rel="stylesheet">
+
+
 
 </head>
 
 <body>
+	<section id="main-content">
 	<!--<div class="background-line"></div>-->
 		<div class="socialmedia-bar">
     <a href="#" class="social-icon"><img src="fb.png" alt="Social Media 1"></a>
@@ -45,19 +48,29 @@
 		<li>About me
 			<span class="vonal"></span>
 		
-		<div class="content content-text michroma-regular" style="font-size: 14px;">My name is Jozsef Jonas. 32 years old Hungarian <img src="hu.png" alt="html" width="20px"> living in the Netherlands. <img src="nl.png" alt="html" width="20px"><br>
+		<div class="content content-text michroma-regular" style="font-size: 14px;">My name is <strong style="color: rgba(140,67,172,1.00); font-size: 20px; font-weight: 800">Jozsef Jonas</strong> <br>
+			32 years old Hungarian <img src="hu.png" alt="html" width="20px"> living in the Netherlands. <img src="nl.png" alt="html" width="20px"><br>
 			<br>
-			
-		<div class="custom-bullet"><span class="underline ">Intermediate front end webdeveloper/UI/UX Designer</span><br>	</div>
-			<br>
-		<div class="custom-bullet"><span class="underline">	Progressive photographer and videographer</span>
-			</div>
-			<br>
-		<div class="custom-bullet"><span class="underline">Mobile webspecialist </span><img src="phone.png" alt="html" width="20px" style="background: white;">	</div>
-	
-			<div class="content2">
-			
-			</div>
+<div class="content2">
+	<div class="icon-style">
+	  <div class="icon" id="icon1"></div>
+    <p><strong style="color: aquamarine; font-weight: 800">I build interfaces.</strong> Fast, clean, responsive. Whether it's a startup prototype or a full-stack webapp, I always aim for intuitive structure and fluid experience.</p>
+  </div>
+	<div class="icon-style">
+<div class="icon" id="icon2"></div>
+
+  <p><strong style="color: aquamarine; font-weight: 800">My aim to create pixel precise</strong> stunning things for web, combining frontend logic with a designer’s eye. UI/UX is not just aesthetics, it’s how the user feels while using it.  An unique online presence is half succes and essential.</p>
+ </div>
+	<div class="icon-style">
+<div class="icon" id="icon3"></div>
+  <p><strong style="color: aquamarine; font-weight: 800">I’m also a visual thinker.</strong> Photography and video are part of how I observe the world – which often translates into dynamic, animated web experiences.</p>
+		</div>
+<br>
+		
+	<p style="position:relative; gap: 50px;">🧠Always <strong style="color: aquamarine">learning.</strong> 	🚀 Always <strong style="color: aquamarine">building.</strong></p>
+		
+
+		</div>	
 		
 			</div>
 		
@@ -73,6 +86,8 @@
 			<img src="ps.png" alt="html" width="20px">PHOTOSHOP
 		    <img src="sql.png" alt="html" width="20px">SQL
 			<img src="c++.png" alt="html" width="20px">C++
+            <img src="chip.png" alt="html" width="40px">AI Tools
+				
 			
 				</span>
 				</div>
@@ -164,8 +179,6 @@
 		-->
 		
 		
-		
-
 	</aside>
 	<div class="nav-border"></div>
 		
@@ -174,13 +187,137 @@
 	<h2 class="title gruppo-regular" style="font-size: 5rem !important;">Jozsef Jonas</h2>
 	<div class="description red-hat-text-font">
 	UI/UX/full stack<br> Hungarian Front End Developer</div>
-	<button class="photographer"></button>
+	  <button class="photographer" onclick="openPhotographer()">
+		<span class="tooltip">Photographer mode</span></button>
 	</div>
 
 		<div class="nav-border2"></div>
  <div class="page2"></div>
-<script>
+	</section>
+	<section id="photographer-page" style="display: none;">
+		  <button onclick="closePhotographer()" class="back-button">
+		<span class="tooltip-back">Coding mode</span></button>
 
+<div class="logo-photo"></div>
+		
+		<!--
+		
+<div class="diamond-slider">
+	  <button class="arrow left">◀</button>
+  <div class="slider-track">
+    <div class="diamond"><img src="jozsi.jpg" alt=""></div>
+    <div class="diamond"><img src="jozsi.jpg" alt=""></div>
+    <div class="diamond"><img src="jozsi.jpg" alt=""></div>
+    <div class="diamond"><img src="jozsi.jpg" alt=""></div>
+	<div class="diamond"><img src="jozsi.jpg" alt=""></div>
+    <div class="diamond"><img src="img2.jpg" alt=""></div>
+    <div class="diamond"><img src="img3.jpg" alt=""></div>
+    <div class="diamond"><img src="img4.jpg" alt=""></div>
+	<div class="diamond"><img src="img3.jpg" alt=""></div>
+    <div class="diamond"><img src="img4.jpg" alt=""></div>
+	<div class="diamond"><img src="img1.jpg" alt=""></div>
+    <div class="diamond"><img src="img2.jpg" alt=""></div>
+    <div class="diamond"><img src="img3.jpg" alt=""></div>
+    <div class="diamond"><img src="img4.jpg" alt=""></div>
+	</div>
+	 <button class="arrow right">▶</button>
+</div>-->
+		
+		 <div class="slider">
+        <!-- list Items -->
+        <div class="list">
+            <div class="item active">
+                <img src="image/jozsi.jpg">
+                <div class="content-galery">
+                    <p>Let's discover</p>
+                    <h2>Switzerland</h2>
+                    <p>
+                        The land of unlimited beauty, the only heaven on earth.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/jozsi3.jpg">
+                <div class="content-galery">
+                    <p>Let's discover</p>
+                    <h2>The Netherlands</h2>
+                    <p>
+                        Crystal clear sandy beaches, romantic citys with canals, and mesmerizing old historical buildings.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/belgium.jpg">
+                <div class="content-galery">
+                    <p>Let's discover</p>
+                    <h2>Belgium</h2>
+                    <p>
+                       
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+               <img src="image/sztgy.jpg">
+                <div class="content-galery">
+                    <p>Let's discover</p>
+                    <h2>Hungary</h2>
+                    <p>
+                        The land of poorness, beside rich in nature and gastronomy.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+              <img src="image/szlovak2.jpg">
+                <div class="content-galery">
+                    <p>Let's discover</p>
+                    <h2>Slovakia</h2>
+                    <p>
+                        Hmm... the High Tatras, 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- button arrows -->
+        <div class="arrows">
+            <button id="prev"></button>
+            <button id="next"></button>
+        </div>
+        <!-- thumbnail -->
+        <div class="thumbnail">
+            <div class="item active">
+                <img src="image/jozsi.jpg">
+                <div class="content-galery">
+                    Switzerland
+                 </div>
+            </div>
+            <div class="item">
+                <img src="image/jozsi3.jpg">
+                <div class="content-galery">
+                    The Netherlands
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/belgium.jpg">
+                <div class="content-galery">
+                   Belgium
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/sztgy.jpg">
+                <div class="content-galery">
+                    Hungary         </div>
+            </div>
+            <div class="item">
+                <img src="image/szlovak2.jpg">
+                <div class="content-galery">
+                    Slovakia
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<script>
 	let currentSlide = 0;
   window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
@@ -192,12 +329,155 @@
     }, 8000); 
   });  
 	
-		
-	document.addEventListener('mousemove', function(e) {
-    const circle = document.getElementById('cursor-circle');
-    circle.style.left = e.pageX + 'px';
-    circle.style.top = e.pageY + 'px';
+const circle = document.getElementById('cursor-circle');
+let mouseX = 0, mouseY = 0;
+let currentX = 0, currentY = 0;
+
+document.addEventListener('mousemove', e => {
+  mouseX = e.pageX;
+  mouseY = e.pageY;
 });
-	</script>
+
+function animate() {
+  // Egyszerű lineáris interpoláció (lerp) a sima lassításhoz
+  currentX += (mouseX - currentX) * 0.1; // 0.1 sebesség, lehet változtatni (0 < speed < 1)
+  currentY += (mouseY - currentY) * 0.1;
+
+  circle.style.transform = `translate(calc(${currentX}px - 50%), calc(${currentY}px - 50%))`;
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+	
+function openPhotographer() {
+  const main = document.getElementById("main-content");
+  const photo = document.getElementById("photographer-page");
+
+  main.style.display = "none";
+  photo.style.display = "block";
+
+  // trigger fade-in
+  setTimeout(() => {
+    photo.style.opacity = "1";
+  }, 10);
+}
+
+function closePhotographer() {
+  const main = document.getElementById("main-content");
+  const photo = document.getElementById("photographer-page");
+
+  // trigger fade-out
+  photo.style.opacity = "0";
+  
+  setTimeout(() => {
+    photo.style.display = "none";
+    main.style.display = "block";
+  }, 500); // ugyanannyi mint a CSS transition idő
+}
+	
+
+	
+	
+	
+	/*
+	
+	
+document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.querySelector('.slider-track');
+
+    let autoScrollActive = true;
+
+    function smoothAutoScroll() {
+      if (!autoScrollActive) return;
+      if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+        slider.scrollLeft = 0;
+      }
+      slider.scrollLeft += 0.5;
+      requestAnimationFrame(smoothAutoScroll);
+    }
+
+    function startAutoScroll() {
+      autoScrollActive = true;
+      requestAnimationFrame(smoothAutoScroll);
+    }
+
+    function stopAutoScroll() {
+      autoScrollActive = false;
+    }
+
+    slider.addEventListener('mouseenter', stopAutoScroll);
+    slider.addEventListener('mouseleave', startAutoScroll);
+
+    startAutoScroll();
+	
+	
+  });
+
+
+	*/
+	let items = document.querySelectorAll('.slider .list .item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let thumbnails = document.querySelectorAll('.thumbnail .item');
+
+// config param
+let countItem = items.length;
+let itemActive = 0;
+// event next click
+next.onclick = function(){
+    itemActive = itemActive + 1;
+    if(itemActive >= countItem){
+        itemActive = 0;
+    }
+    showSlider();
+}
+//event prev click
+prev.onclick = function(){
+    itemActive = itemActive - 1;
+    if(itemActive < 0){
+        itemActive = countItem - 1;
+    }
+    showSlider();
+}
+// auto run slider
+let refreshInterval = setInterval(() => {
+    next.click();
+}, 5000)
+function showSlider(){
+    // remove item active old
+    let itemActiveOld = document.querySelector('.slider .list .item.active');
+    let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
+    itemActiveOld.classList.remove('active');
+    thumbnailActiveOld.classList.remove('active');
+
+    // active new item
+    items[itemActive].classList.add('active');
+    thumbnails[itemActive].classList.add('active');
+    setPositionThumbnail();
+
+    // clear auto time run slider
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(() => {
+        next.click();
+    }, 5000)
+}
+function setPositionThumbnail () {
+    let thumbnailActive = document.querySelector('.thumbnail .item.active');
+    let rect = thumbnailActive.getBoundingClientRect();
+    if (rect.left < 0 || rect.right > window.innerWidth) {
+        thumbnailActive.scrollIntoView({ behavior: 'smooth', inline: 'nearest' });
+    }
+}
+
+// click thumbnail
+thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+        itemActive = index;
+        showSlider();
+    })
+})
+</script>
+
 </body>
 </html>
