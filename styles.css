@@ -124,14 +124,15 @@ box-shadow: 0 0 120px #0CB6A5;
   font-style: normal;
 }
 	.title{
-		position: absolute;
-		padding: 10px;
+		position: fixed;
+		font-size:5rem;
+		padding: 120px;
 		font-weight: 300;
 		color:white;
-		top: 0;
-		right: 13vw !important;
+		top: -6vh;
+		right: 6vw !important;
 		margin: 50px;
-		white-space: nowrap !important;
+		
   text-align: center;
   background: linear-gradient(
     to right,
@@ -219,8 +220,11 @@ box-shadow: 0 0 120px #0CB6A5;
 			@media (max-width: 800px) {
   .background {
     background-size: 80%; 
-    background-position: center left;
+	background-position: center left -30%;
+   
   }
+				
+				
 				
 		.logo2{
 		width: 25vw !important;
@@ -235,73 +239,7 @@ box-shadow: 0 0 120px #0CB6A5;
 				}
 }
 
-@media (max-width: 500px) {
-	.logo2{
-		top: 25vh !important;
-		width: 20vw !important;
-		height: 20vh !important;
-		left: 66vw !important;
-		
-	}
-	
-	
-	.logo3{
-		top: 0 !important;
-		opacity: 1 !important;
-        width: 20vw !important;
-		height: 9.5vh !important;
 
-	}
-	
-	.background{
-		background-size: 100% !important;
-		margin-top: 15vh;
-		right: 10vw;
-	}
-	.button{
-	   
-		margin: 0 auto !important;
-		width: 90px !important;
-		white-space: normal;
-		font-size: 0.75rem;
-		animation: fall2 2s ease-in forwards !important;
-		margin-top: 80vh !important;
-		z-index: 2;
-	}
-	
-	.logo-container{
-		
-		margin-top: -13vh;
-	}
-
-	.logo-text{
-		font-size: 1rem !important;
-	}
-	
-	.nav-border{
-	    padding: 1px !important;
-		position: absolute!important;
-		top: -49vh !important;
-		left: 20vw !important;
-		width: 100% !important;
-
-	}
-	
-	.nav-border2{
-		position: absolute!important;
-        bottom: 0 !important;
-
-	}
-	
-	.title{
-		font-size: 2.5rem !important;
-		white-space: nowrap !important;
-		left: 0 !important;
-	}
-	#cursor-circle{
-		display: none;
-	}
-}
 @media (max-width: 1350px) {
 	h1{
 		font-size: 20rem;
@@ -329,7 +267,29 @@ box-shadow: 0 0 120px #0CB6A5;
 		
 		}
 	}
+@media (max-width: 500px) {
+.title{
+    white-space: nowrap;
+    display: inline;
+	font-size: 3rem !important;
+	top: -5vh !important;
+	right: -14% !important;
 
+	
+}
+
+	.cursor-circle{
+		display: none;
+	}
+				
+  .background {
+    background-size: 100%; 
+	background-position: center right 100px;
+	  margin-top: 100px !important;
+ 
+  }
+			
+}
 	
 	aside{
 		
@@ -944,32 +904,7 @@ pointer-events: none;
   }
 }
 
-@media (max-width: 500px) {
-  .gradient-container {
-    position: fixed; /* Biztosítja, hogy a képernyőn maradjon */
-    top: 0;
-    left: 0;
-    height: 100vh; /* A teljes magasságot kitölti */
-    width: 100vw;  /* A teljes szélességet kitölti */
-    z-index: 9999; /* Minden más elé */
-    pointer-events: none; /* Ne zavarja a kattintásokat */
-  }
-	.photographer{
-		right: 10vw !important;
-		width: 30px !important;
-		height: 30px !important;
-	}
 
-  .moving-gradient {
-    background-size: 500% 500%; /* Növeli a háttér méretét a kisebb képernyőkön */
-    opacity: 0.15; /* Kevésbé áttetsző mobilon */
-  }
-}
-.title{
-	position: absolute;
-	font-size: 3rem !important;
-	top: 50px !important;
-}
 
 .description{
 position: absolute;
@@ -1018,8 +953,7 @@ top: 150px !important;
 .socialmedia-bar{
 	position: absolute;
 	top: 1vh;
-	right: 15vh;
-	width: 5vw;
+	right: 0;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
