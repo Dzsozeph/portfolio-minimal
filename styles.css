@@ -308,7 +308,7 @@ box-shadow: 0 0 120px #0CB6A5;
 		position: relative;
 		top: 35vh;
 		left: 38vw;
-		width: 13vw;
+		width: 16vw;
 		z-index: 1;
 		/*border-top: solid 1px white;*/
         display: flex;
@@ -1077,7 +1077,7 @@ background: linear-gradient(286deg, rgba(24, 5, 51, 1) 56%, rgba(0, 0, 0, 1) 100
   transition: background 0.3s;
   position: fixed;
   bottom: 4vh;
-  margin-left: 3vh;
+  margin-left: 6vh;
 
 }
 
