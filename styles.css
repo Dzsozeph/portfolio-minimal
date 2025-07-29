@@ -135,8 +135,8 @@ box-shadow: 0 0 120px #0CB6A5;
 }
 	.title{
 		position: fixed;
-		font-size:5rem;
-		padding: 120px;
+	  font-size: clamp(2rem, 5vw, 5rem);
+  padding: clamp(20px, 10vw, 120px);
 		font-weight: 300;
 		color:white;
 		top: -6vh;
@@ -256,7 +256,7 @@ box-shadow: 0 0 120px #0CB6A5;
 	}
 	 
 	.title{
-		font-size:3.5rem;
+		font-size:4.5rem;
 	}
 	
 
@@ -1051,19 +1051,20 @@ background: linear-gradient(286deg, rgba(24, 5, 51, 1) 56%, rgba(0, 0, 0, 1) 100
 	z-index: 1;
 }
 
-.logo-photo{
-	position: fixed;
-    left: -1vw;
-	width: 15vw;
-	height: 15vh;
-	background-image: url("photologo3.png");
-	background-size: cover;
-	background-position: center;
-	z-index: 99999;
-	opacity: 1;
-	top: -1.2vh;
-
+.logo-photo {
+  position: fixed;
+  top: -3vh;
+  margin-left: 2vw;
+  width:  200px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  background-image: url("photologo3.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 99999;
+  opacity: 1;
 }
+
 
 .back-button {
   z-index: 999;
@@ -1359,4 +1360,44 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
   font-family: "Felipa", serif;
   font-weight: 400;
   font-style: normal;
+}
+
+
+@media (max-width: 1740px) {
+	.content-text{
+		font-size: 0.7rem !important;
+	}
+		}
+
+@media (max-width: 1450px) {
+	li:hover .content{
+		top: 45vh !important;
+	}
+	
+
+	.logo-photo{
+		margin-left: 5vw;
+		}
+		}
+
+@media (max-width: 1350px) {
+	li:hover .content{
+		width: 90vw;
+		min-height:2250px;
+		background-color: rgba(0,0,0,0.64);
+		margin-top: -34vh !important;
+		z-index: 99999999999999;
+	
+	}
+		}
+@media (max-width: 970px){
+	.logo-photo{
+		left: 50%;
+		transform: translatex(-50%);
+		top: -5vh !important;
+	}
+		.back-button{
+		top: 2vh!important;
+		left: -3vw !important;
+	}
 }
