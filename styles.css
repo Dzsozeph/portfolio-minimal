@@ -17,6 +17,7 @@
 		 height: 100vh;
 	     overflow: hidden;
 		 background-color: black;
+		 transition: all 0.3s ease;
 		
 	}
 
@@ -187,7 +188,7 @@ box-shadow: 0 0 120px #0CB6A5;
 
 
 	.background{
-		background-color: black;
+
 		width: 100vw;
 		min-height: 100vh;
 		background-image: url("metest.png");
@@ -198,8 +199,6 @@ box-shadow: 0 0 120px #0CB6A5;
 		top: -10vh;
 		position: absolute;
 		z-index: -1;
-	
-	
 	}
 
 	@media (max-width: 1650px) {
@@ -220,7 +219,9 @@ box-shadow: 0 0 120px #0CB6A5;
     background-position: center left;
   }
 	     
-
+		.title{
+			margin-top: 5vh;
+		}
 		
 		aside{
 		opacity: 0;
@@ -233,6 +234,8 @@ box-shadow: 0 0 120px #0CB6A5;
 	background-position: center left -30%;
    
   }
+				
+				
 				
 				
 				
@@ -282,11 +285,17 @@ box-shadow: 0 0 120px #0CB6A5;
     white-space: nowrap;
     display: inline;
 	font-size: 3rem !important;
-	top: -5vh !important;
-	right: -14% !important;
+	top: 5vh !important;
+	
 
 	
 }
+	
+	.logo3{
+		width:70px !important;
+		height: 70px !important;
+		
+	}
 
 	.cursor-circle{
 		display: none;
@@ -298,6 +307,8 @@ box-shadow: 0 0 120px #0CB6A5;
 	  margin-top: 100px !important;
  
   }
+	
+
 			
 }
 	
@@ -313,6 +324,7 @@ box-shadow: 0 0 120px #0CB6A5;
 		/*border-top: solid 1px white;*/
         display: flex;
 		flex-direction: column; /* EZZEL RENDEZED FÜGGŐLEGESEN */
+
 		
 	
 	}
@@ -324,6 +336,9 @@ box-shadow: 0 0 120px #0CB6A5;
 		cursor: pointer;
 		font-size: 1.2rem;
         padding: 5px;
+		
+		
+	
 	
 	}
 
@@ -342,6 +357,7 @@ li:hover{
 	
 	li:hover ul{
 		display:flex;
+		
 		
 		
 	}
@@ -392,7 +408,7 @@ right: 5vw;
 		cursor: grab;
 		left: 40vw;
 		animation: fall 2s ease-in forwards;
-		z-index: 99999;
+		z-index: 9;
 		margin-top: 5vh;
 	
 	}
@@ -526,7 +542,7 @@ li:hover .vonal3{
 background: #128766;
 background: linear-gradient(300deg, rgba(18, 135, 102, 0.4) 0%, rgba(14, 106, 80, 0.4) 0%, rgba(12, 88, 67, 0.4) 6%, rgba(9, 67, 51, 0.4) 8%, rgba(0, 0, 0, 0.4) 13%, rgba(22, 46, 39, 0.4) 62%, rgba(0, 0, 0, 0.4) 100%);
 pointer-events: none;
-  z-index: 2;
+  z-index: 10;
   margin-top: -10vh;
   left: 15vw;
  box-shadow: 0 3px 3px 0 #32B896;
@@ -534,13 +550,7 @@ pointer-events: none;
  
 }
 
-.grid-container-popup{
-  clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
-  background: rgba(0, 0, 0, 0.9);
-  box-shadow: 0 40px 60px rgba(0, 0, 0, 0.5);
-  transform: perspective(1000px) rotateX(5deg);
-  transition: all 0.4s ease;
-}
+
 
 .mini-site {
   border: 1px solid #3C8C68;
@@ -962,7 +972,7 @@ top: 150px !important;
 }
 .socialmedia-bar{
 	position: absolute;
-	top: 1vh;
+	top: 3vh;
 	right: 0;
 	display: flex;
 	flex-direction: row;
@@ -1389,6 +1399,18 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
 		z-index: 99999999999999;
 	
 	}
+	
+	.grid-container{
+		display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+		position: fixed;
+		width: 90vw;
+		min-height: 50vw;
+		background-color: rgba(0,0,0,0.90);
+		margin-top: -34vh !important;
+		z-index: 10 !important;
+	}
 		}
 @media (max-width: 970px){
 	.logo-photo{
@@ -1400,4 +1422,37 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
 		top: 2vh!important;
 		left: -3vw !important;
 	}
+}
+
+@media (max-height: 850px){
+	
+	.nav-border{
+		top: 15vh;
+	}
+}
+
+.flagch{
+	display: inline-block;
+	position: absolute;
+	top: -15vh;
+	width: 350px;
+	height: 200px;
+	background-image: url("chflag.png");
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+}
+
+.flagnl{
+	display: inline-block;
+	position: absolute;
+	left: -30px;
+	top: -15vh;
+	width: 350px;
+	height: 200px;
+	background-image: url("nlflag.png");
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+	
 }
