@@ -826,7 +826,7 @@ background: linear-gradient(300deg, rgba(18, 135, 102, 0.4) 0%, rgba(14, 106, 80
   );
   background-size: 400% 400%;
   animation: moveGradient 40s linear infinite;
-  opacity: 0.080;
+  opacity: 0.120;
   pointer-events: none;
   z-index: 1;
 }
