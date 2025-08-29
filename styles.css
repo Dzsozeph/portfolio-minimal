@@ -165,8 +165,8 @@ box-shadow: 0 0 120px #0CB6A5;
   position: fixed;
   font-weight: 300;
   color:white;
-  top: 10vh;
-  right: 15vw !important;
+  top: 8vh;
+  right: 13vw !important;
   margin: 50px;	
   text-align: center;
   background: linear-gradient(
@@ -185,7 +185,7 @@ box-shadow: 0 0 120px #0CB6A5;
   -webkit-text-fill-color: transparent;
   animation: animate-gradient 10s linear infinite, slideInRight 2s ease-out forwards;
   white-space: nowrap;
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 @keyframes animate-gradient {
@@ -275,6 +275,10 @@ box-shadow: 0 0 120px #0CB6A5;
 		
 				}
 	
+	.logo3{
+		margin-top: -5px !important;
+	}
+	
 	.title{
 		margin-top: 2vh !important;
 		width: 100vw !important;
@@ -285,6 +289,10 @@ box-shadow: 0 0 120px #0CB6A5;
 		margin-top: -0.5vh !important;
 		margin-left: 25vw;
 		font-size: 0.7rem;
+	}
+	
+	.button{
+		
 	}
 }
 
