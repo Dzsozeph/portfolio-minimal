@@ -930,7 +930,7 @@ top: 150px !important;
   margin: 10px 0;
 }
 
-#icon1 {
+.icon1 {
   width: 40px;
   height: 40px;
   background-image: url("desktop-thin2.png");
@@ -938,7 +938,7 @@ top: 150px !important;
   flex-shrink: 0;
 }
 
-#icon2 {
+.icon2 {
   width: 40px;
   height: 40px;
   background-image: url("magic-wand-thin.png");
@@ -946,7 +946,7 @@ top: 150px !important;
   flex-shrink: 0;
 }
 
-#icon3 {
+.icon3 {
   width: 40px;
   height: 40px;
   background-image: url("aperture-thin.png");
@@ -1550,6 +1550,7 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
 
 @media (max-width: 1350px) {
 	li:hover .content{
+		width:  80vw !important;
 		position: fixed;
 		left:50% !important;
 		transform: translateX(-50%);
@@ -1564,9 +1565,8 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
 		position: fixed;
-		width: 90vw;
+		width: 80vw !important;
 		min-height: 50vw;
-		background-color: rgba(0,0,0,0.90);
 		margin-top: -34vh !important;
 		z-index: 10 !important;
 	}
@@ -1738,9 +1738,11 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
   cursor: pointer;
   color: white;
   right: 0;
- 
 	
 }
+.menu li:hover {
+	text-decoration: underline aqua;
+	}
 
 .close-btn {
   position: absolute;
@@ -1799,6 +1801,18 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
 	    grid-template-columns: repeat(1, 1fr);
 		overflow: scroll;
 	    min-width: 85% !important;
+		background-color: black;
+	}
+	
+	.slider .list .item .content-galery p{
+    font-size: 15px;
+    margin: 0;
+	color: white;
+}
+	
+	.tooltip-back{
+		margin-left: -25px;
+		font-size: 10px;
 	}
 	}
 
@@ -1809,3 +1823,6 @@ display: inline-flex; /* szép igazítás miatt */
   gap: 15px; /* kép és szöveg közé is */
 
 }
+
+
+
