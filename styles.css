@@ -313,7 +313,7 @@ pointer-events: auto; /* ⬅️ csak hover alatt legyen kattintható */
   transition: all 1s ease;
   right: -2vw !important;
   z-index: 2;
-	pointer-events: none;
+  pointer-events: none;
   
 }
 	
@@ -346,7 +346,7 @@ pointer-events: auto; /* ⬅️ csak hover alatt legyen kattintható */
 
 	}
 
-.content-text img[src*="dreamweaver"] {
+.content-text{
   display: block !important;
 }
 
@@ -435,11 +435,7 @@ li:hover .vonal3{
 		width: 5vw;
 	margin-left: -5.7rem;
 	}
-	.margin{
-  display: inline-flex; /* szép igazítás miatt */
-  align-items: center;
-  gap: 15px; /* kép és szöveg közé is */
-	}
+
 	
 	.works-container{
 		position: relative;
@@ -1719,11 +1715,11 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
 
 /* Menü stílus */
 .menu {
-  display: block;
+  display: none;
   position: fixed;
   top: 40%;
   right: 0;
-  width: 25%;
+  width: 30%;
   min-height: 20%;
   background-color: rgba(0, 0, 0, 1);
   color: white;
@@ -1731,7 +1727,7 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
   flex-direction: column;  /* Vertikális elrendezés */
   box-shadow: 0 0 50px #6834A8;
   border-radius: 20px;
-	white-space: nowrap;
+  white-space: nowrap;
 
 }
 
@@ -1763,11 +1759,20 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
     display: flex;
   }
 	
-	.menu li:hover .content{
-		width: 20%;
-		height: 20%;
+	li:hover .content{
+		width: 98vw !important;
+		height: 100vh !important;
+		white-space: normal;
+		margin-top: -35vh!important;
 	}
- 
+	
+
+	.content2{
+		max-width: 70vw!important;
+		overflow: scroll;
+		white-space: normal;
+	
+	}
 }
 
 @keyframes bounce {
@@ -1778,11 +1783,29 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
     transform: translateY(-20px); /* Középen: 20px-t feljebb ugrik */
   }
 }
-
-
-/* Reszponzív beállítások */
 @media (max-width: 600px) {
-  .hamburger {
-    display: flex;
-  }
+
+	.experience-list{
+		display: flex !important;
+		max-width: 70vw!important;
+		overflow: scroll;
+		white-space: normal;
+		flex-direction: column !important;
+		padding: 50px!important;
+		
+	}
+	
+	.grid-container{
+	    grid-template-columns: repeat(1, 1fr);
+		overflow: scroll;
+	    min-width: 85% !important;
+	}
+	}
+
+
+.margin{
+display: inline-flex; /* szép igazítás miatt */
+  align-items: center;
+  gap: 15px; /* kép és szöveg közé is */
+
 }
