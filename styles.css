@@ -194,6 +194,7 @@ body{
   animation: animate-gradient 10s linear infinite, slideInRight 2s ease-out forwards;
   white-space: nowrap;
   font-size: 5rem;
+		z-index: 12;
 }
 
 @keyframes animate-gradient {
