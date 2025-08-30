@@ -993,13 +993,13 @@ background: linear-gradient(286deg, rgba(24, 5, 51, 1) 56%, rgba(0, 0, 0, 1) 100
   border: none;
   background-image: url("codesandbox-logo-thin.png");
   background-size: cover;
-  background-color: transparent;
+  background-color: black;
   cursor: pointer;
   transition: background 0.3s;
   position: fixed;
   bottom: 4vh;
   margin-left: 6vh;
-  box-shadow: 0 0 30px black;
+  box-shadow: 0 0 30px aquamarine;
   border-radius: 50%;
 
 }
@@ -1499,8 +1499,17 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
 		width: 40px !important;
 		height: 40px !important;
 	}
+
 			
 }
+
+@media (max-width: 400px) {
+	.background{
+		background-size: 120% !important;
+		left: -20% !important;
+		margin-top: 50px !important;
+	}
+	}
 
 @media (max-width: 768px) {
   .gradient-container {
@@ -1688,55 +1697,58 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
 .hamburger {
   position: fixed;
   right: 10px !important;
-  bottom: 40px !important;
+  bottom: 46% !important;
   display: none;
   flex-direction: column;
-  width: 30px;
+  width: 25px;
   height: 25px;
   justify-content: space-between;
   cursor: pointer;
   z-index: 11;
   margin: 10px;
+  display: none;
+  animation: bounce 2s infinite;
   
 }
 
 .bar {
   width: 100%;
   height: 5px;
-  background-color: white;
   border-radius: 5px;
 }
 
 /* Menü stílus */
 .menu {
-  display: none;
+  display: block;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  top: 40%;
+  right: 0;
+  width: 33%;
+  min-height: 20%;
+  background-color: rgba(0, 0, 0, 1);
   color: white;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+  z-index: 12;
+  flex-direction: column;  /* Vertikális elrendezés */
+  box-shadow: 0 0 50px #6834A8;
+  border-radius: 20px;
+
 }
 
-.menu ul {
-  list-style-type: none;
-  padding: 0;
-}
 
-.menu ul li {
+.menu li {
   padding: 15px;
-  font-size: 20px;
+  font-size: 15px;
   cursor: pointer;
+  color: white;
+  right: 0;
+ 
+	
 }
 
 .close-btn {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 70px;
+  right: 2px;
   font-size: 30px;
   background: none;
   border: none;
@@ -1749,4 +1761,23 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
   .hamburger {
     display: flex;
   }
+	
+	.menu li:hover .content{
+		width: 20%;
+		height: 20%;
+	}
+ 
 }
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Kezdeti és végpont: alaphelyzet */
+  }
+  50% {
+    transform: translateY(-20px); /* Középen: 20px-t feljebb ugrik */
+  }
+}
+
+
+
+
