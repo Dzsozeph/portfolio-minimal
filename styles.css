@@ -1678,4 +1678,7 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
 		margin-top: -5px !important;
 		
 	}
-	}
+	
+	.social-icon img {
+		width: 20px !important;
+	}}
