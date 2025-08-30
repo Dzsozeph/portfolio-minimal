@@ -301,7 +301,7 @@ border-right: solid 1px rgba(6,138,90,1.00);
 padding: 45px;
 right: 5vw;
 pointer-events: auto; /* ⬅️ csak hover alatt legyen kattintható */
-	overflow: scroll;
+overflow: hidden;
 
 
 }
@@ -1731,6 +1731,7 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
   box-shadow: 0 0 50px #6834A8;
   border-radius: 20px;
   white-space: nowrap;
+  animation: slideInRight ease 1s;
 
 }
 
@@ -1756,6 +1757,7 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
   border: none;
   color: white;
   cursor: pointer;
+
 }
 
 /* Reszponzív beállítások */
@@ -1769,6 +1771,8 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
 		height: 100vh !important;
 		white-space: normal;
 		margin-top: -35vh!important;
+		
+		
 	}
 	
 
@@ -1776,6 +1780,7 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
 		max-width: 70vw!important;
 		overflow: scroll;
 		white-space: normal;
+		
 	
 	}
 }
