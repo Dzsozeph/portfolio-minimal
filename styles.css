@@ -1723,7 +1723,7 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
   position: fixed;
   top: 40%;
   right: 0;
-  width: 33%;
+  width: 25%;
   min-height: 20%;
   background-color: rgba(0, 0, 0, 1);
   color: white;
@@ -1731,6 +1731,7 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
   flex-direction: column;  /* Vertikális elrendezés */
   box-shadow: 0 0 50px #6834A8;
   border-radius: 20px;
+	white-space: nowrap;
 
 }
 
@@ -1779,5 +1780,9 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
 }
 
 
-
-
+/* Reszponzív beállítások */
+@media (max-width: 600px) {
+  .hamburger {
+    display: flex;
+  }
+}
