@@ -1574,7 +1574,7 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
 	}
 		.back-button{
 		top: 2vh!important;
-		margin-left: 10px !important;
+		margin-left: 30px !important;
 	}
 }
 
@@ -1633,3 +1633,49 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
 	
 }
 }
+
+@media (max-width: 600px){
+	.flagch{
+		width: 100px!important;
+		height: 60px !important;
+		margin-top: 10vh !important;
+	}
+	
+	.flagnl{
+		width: 100px!important;
+		height: 60px !important;
+		margin-top: 10vh !important;
+	}
+	.flagbe{
+		width: 100px!important;
+		height: 60px !important;
+		margin-top: 5vh !important;
+	}
+	.flaghu{
+		width: 100px!important;
+		height: 60px !important;
+		margin-top: 10vh !important;
+	
+	}
+	
+	.flagslv{
+		width: 100px!important;
+		height: 60px !important;
+		margin-top: 10vh !important;
+		
+	}
+	
+	.logo-photo{
+		width: 130px !important;
+		height: 130px !important;
+		left: 50px !important;
+		margin-top: 10px !important;
+		
+	}
+	
+	.back-button{
+		right: 10px !important;
+		margin-top: -5px !important;
+		
+	}
+	}
