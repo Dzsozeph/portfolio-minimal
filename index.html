@@ -205,8 +205,28 @@
 	</div>
 
 		<div class="nav-border2"></div>
- <div class="page2"></div>
-	</section>
+		
+	  <!-- Hamburger ikon -->
+  <div class="hamburger" id="hamburger-icon">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <!-- Menü -->
+  <div class="menu" id="menu">
+	   <button class="close-btn" id="close-btn">&times;</button>
+    <ul>
+      <li>Első elem</li>
+      <li>Második elem</li>
+      <li>Harmadik elem</li>
+    </ul>
+  </div>	
+		
+		
+		</section>
+		
+	
 	<section id="photographer-page" style="display: none;">
 		  <button onclick="closePhotographer()" class="back-button">
 		<span class="tooltip-back">Coding mode</span></button>
@@ -337,6 +357,8 @@
             </div>
         </div>
     </div>
+		
+		
 <!--<button class="journey-start-button">
 	<a class="felipa-regular">Start your yourner<br>
 		NOW</a></button>-->
@@ -501,6 +523,17 @@ thumbnails.forEach((thumbnail, index) => {
         showSlider();
     })
 })
+	
+	const hamburgerIcon = document.getElementById('hamburger-icon');
+const menu = document.getElementById('menu');
+	const closeBtn = document.getElementById('close-btn');
+
+hamburgerIcon.addEventListener('click', () => {
+  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+});
+	closeBtn.addEventListener('click', () => {
+  menu.style.display = 'none';
+});
 </script>
 
 </body>

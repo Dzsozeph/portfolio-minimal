@@ -1682,3 +1682,71 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
 	.social-icon img {
 		width: 20px !important;
 	}}
+
+/*-------------------------------------------MOBIL UI----------------------*/
+
+.hamburger {
+  position: fixed;
+  right: 10px !important;
+  bottom: 40px !important;
+  display: none;
+  flex-direction: column;
+  width: 30px;
+  height: 25px;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 11;
+  margin: 10px;
+  
+}
+
+.bar {
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Menü stílus */
+.menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu ul li {
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Reszponzív beállítások */
+@media (max-width: 600px) {
+  .hamburger {
+    display: flex;
+  }
+}
