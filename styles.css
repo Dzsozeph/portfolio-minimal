@@ -1403,7 +1403,11 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
 }
 @media (max-width: 600px) {
 	
-	
+		aside li{
+		
+		display: none;
+		
+	}
 	.nav-border{
 		top: 2px !important;
 		height: 6px !important;
@@ -1489,11 +1493,7 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
  
   }
 
-	aside li{
-		
-		display: none;
-		
-	}
+
 	.photographer{
 		width: 40px !important;
 		height: 40px !important;
