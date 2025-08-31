@@ -1103,6 +1103,8 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
         to top, #000 30%, transparent
     );
 }
+
+
 .slider .list .item .content-galery{
     position: absolute;
     left: 10%;
@@ -1399,20 +1401,25 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 
 .gallery-content {
   position: absolute;
-  width: 70vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw; /* növelheted, hogy ne vágja le a képeket */
   height: 70vh;
   display: flex;
   align-items: center;
   gap: 20px;
-  margin: 0 auto;
 }
 
 .gallery-content img {
   max-height: 90vh;
-  max-width: 90vw;
+  width: 100%; /* sosem lóg ki a konténerből */
   border-radius: 10px;
   margin: 0 auto;
   transition: transform 0.6s ease, opacity 0.6s ease;
+   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .gallery-content button {
@@ -1506,6 +1513,9 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
     background-position: center left;
   }
 		
+			.slider .list .item .content-galery p{
+    font-size: 18px;
+	}	
 		.nav-border{
 			left: 50vw !important;
 			width: 50vw !important;
@@ -1552,8 +1562,11 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 @media (max-width: 600px) {
 	
 		aside li{
-		
-		display: none;
+		background-color: red;
+			width: 50px;
+			height: 50px;
+		display: block;
+			z-index: 99999999999; 
 		
 	}
 	.nav-border{
@@ -1837,7 +1850,7 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 	
 	.social-icon img {
 		width: 20px !important;
-	}}
+	}
 
 .thumbnail .item{
     width: 120px;
@@ -1851,6 +1864,21 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 .thumbnail{
 	top: 80vh;
 }
+
+	.slider .list .item::after{
+		
+	 background-image: linear-gradient(
+        to top, #000 10%, transparent );
+   
+}
+	
+	.arrows{
+		position: absolute;
+		bottom: -5vh !important;
+	}
+	}
+    
+
 /*-------------------------------------------MOBIL UI----------------------*/
 
 .hamburger {
