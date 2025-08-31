@@ -1799,7 +1799,7 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
 	.experience-list{
 		display: flex !important;
 		flex-wrap: wrap !important;
-		width: 80vw!important;
+		width: 90vw!important;
 		overflow: auto;
 		white-space: normal;
 		padding: 50px!important;
@@ -1833,12 +1833,12 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 1) 68%, rgba(66, 61, 61, 1) 94%)
 		
 	}
 .grid-container-3{
-    width: 100vw;
+
     height: 100vh;
     display: grid; /* hiányzott */
     grid-template-columns: repeat(1, 1fr);
     overflow: auto; /* scroll-hoz auto a jobb */
-    min-width: 85% !important;
+    width: 80vw !important;
     background-color: black;
 }
 
