@@ -1965,15 +1965,13 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 
 	.experience-list{
 		display: flex !important;
-		flex-wrap: wrap !important;
+		flex-wrap: wrap!important;
 		width: 90vw!important;
-		overflow: auto;
+		overflow-y: auto; /* scroll-hoz auto a jobb */
 		white-space: normal;
-		padding: 50px!important;
 		margin: 0 auto;
 		gap: 60px;
-	   background: #000000;
-background: linear-gradient(0deg, rgba(0, 0, 0, 1) 68%, rgba(66, 61, 61, 1) 94%);
+		padding: 30px;
 		border: solid 1px rgba(106,23,187,1.00);
 	
 	}
@@ -1996,18 +1994,27 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 1) 68%, rgba(66, 61, 61, 1) 94%)
 		font-size: 10px;
 	}
 	
-	.certificates{
-		
-	}
-.grid-container-3{
 
+.grid-container-3{
     height: 100vh;
     display: grid; /* hiányzott */
     grid-template-columns: repeat(1, 1fr);
-    overflow: auto; /* scroll-hoz auto a jobb */
-    width: 80vw !important;
+    overflow-y: auto; /* scroll-hoz auto a jobb */
+    width:100vw !important;
     background-color: black;
 }
+	
+	.mobile-title{
+		font-family: "Red Hat Text" sans-serif;
+		margin: 30px auto;
+		text-align: center;
+		font-size: 1.3rem;
+		padding: 20px;
+		border-bottom: 1px solid #5E29AA;
+		
+		
+		
+	}
 
 .grid-3-cards img,
 .mini-site img {
