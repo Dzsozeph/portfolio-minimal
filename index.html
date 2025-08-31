@@ -483,10 +483,23 @@
         </div>
     </div>
 		
-		
-<!--<button class="journey-start-button">
-	<a class="felipa-regular">Start your yourner<br>
-		NOW</a></button>-->
+<div class="journey-start-button">
+  <a href="javascript:void(0)">Start your journey<br>
+	NOW</a>
+</div>
+
+<!-- Modal Galéria -->
+<div id="galleryModal" class="gallery-modal">
+  <span class="close-gallery">&times;</span>
+  <div class="gallery-content">
+    <button id="gallery-prev">‹</button>
+    <div class="gallery-inner">
+      <img id="gallery-image" src="" alt="Gallery Image">
+      <div id="gallery-caption" class="gallery-caption"></div>
+    </div>
+    <button id="gallery-next">›</button>
+  </div>
+</div>
 </section>
 <script>
 	let currentSlide = 0;
@@ -494,7 +507,6 @@
     const preloader = document.getElementById("preloader");
     preloader.classList.add("fade-out");
 
-  
     setTimeout(() => {
       preloader.remove();
     }, 2000); 
@@ -510,8 +522,7 @@ document.addEventListener('mousemove', e => {
 });
 
 function animate() {
-  // Egyszerű lineáris interpoláció (lerp) a sima lassításhoz
-  currentX += (mouseX - currentX) * 0.1; // 0.1 sebesség, lehet változtatni (0 < speed < 1)
+  currentX += (mouseX - currentX) * 0.1; 
   currentY += (mouseY - currentY) * 0.1;
 
   circle.style.transform = `translate(calc(${currentX}px - 50%), calc(${currentY}px - 50%))`;
@@ -528,7 +539,6 @@ function openPhotographer() {
   main.style.display = "none";
   photo.style.display = "block";
 
-  // trigger fade-in
   setTimeout(() => {
     photo.style.opacity = "1";
   }, 10);
@@ -538,15 +548,13 @@ function closePhotographer() {
   const main = document.getElementById("main-content");
   const photo = document.getElementById("photographer-page");
 
-  // trigger fade-out
   photo.style.opacity = "0";
   
   setTimeout(() => {
     photo.style.display = "none";
     main.style.display = "block";
-  }, 500); // ugyanannyi mint a CSS transition idő
+  }, 500); 
 }
-	
 
 	
 	
@@ -587,6 +595,107 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 	*/
+	
+	
+	// Példa képadatbázis
+const galleryData = {
+  0: [
+    { src: "1.jpg", caption: "Switzerland – Mountain view" },
+    { src: "2.jpg", caption: "Switzerland – Lake in the Alps" },
+    { src: "3.jpg", caption: "Switzerland – Village panorama" },
+    { src: "4.jpg", caption: "Switzerland – Sunset in the valley" }
+  ],
+  1: [
+    { src: "", caption: "Amsterdam city canal" },
+    { src: "image/netherlands2.jpg", caption: "Dutch windmills" }
+  ],
+  2: [
+    { src: "image/belgium1.jpg", caption: "Brussels Grand Place" },
+    { src: "image/belgium2.jpg", caption: "Chocolate shop" }
+  ],
+  3: [
+    { src: "image/hungary1.jpg", caption: "Budapest Parliament" },
+    { src: "image/hungary2.jpg", caption: "Lake Balaton" }
+  ],
+  4: [
+    { src: "image/slovakia1.jpg", caption: "High Tatras mountains" },
+    { src: "image/slovakia2.jpg", caption: "Bratislava castle" }
+  ]
+};
+
+const journeyBtn = document.querySelector('.journey-start-button');
+const galleryModal = document.getElementById('galleryModal');
+const galleryImage = document.getElementById('gallery-image');
+const galleryCaption = document.getElementById('gallery-caption');
+const closeGallery = document.querySelector('.close-gallery');
+const galleryPrev = document.getElementById('gallery-prev');
+const galleryNext = document.getElementById('gallery-next');
+
+let currentGallery = [];
+let currentIndex = 0;
+let autoSlideInterval;
+
+// --- Kép frissítése animációval ---
+function updateGallery(direction = 1) {
+  galleryImage.classList.remove("slide-in-left", "slide-in-right");
+
+  void galleryImage.offsetWidth; // újraindítja az animációt
+
+  if (direction === 1) {
+    galleryImage.classList.add("slide-in-right");
+  } else {
+    galleryImage.classList.add("slide-in-left");
+  }
+
+  galleryImage.src = currentGallery[currentIndex].src;
+  galleryCaption.textContent = currentGallery[currentIndex].caption || "";
+}
+
+// --- Automatikus váltás ---
+function startAutoSlide() {
+  stopAutoSlide(); 
+  autoSlideInterval = setInterval(() => {
+    currentIndex = (currentIndex + 1) % currentGallery.length;
+    updateGallery(1);
+  }, 4000);
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
+
+// --- Megnyitás ---
+journeyBtn.addEventListener('click', () => {
+  currentGallery = galleryData[itemActive] || []
+  if (currentGallery.length > 0) {
+    currentIndex = 0;
+    updateGallery();
+    galleryModal.style.display = 'flex';
+    startAutoSlide();
+  }
+});
+
+// --- Bezárás ---
+closeGallery.addEventListener('click', () => {
+  galleryModal.style.display = 'none';
+  stopAutoSlide();
+});
+
+// --- Előző ---
+galleryPrev.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+  updateGallery(-1);
+  startAutoSlide();
+});
+
+// --- Következő ---
+galleryNext.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % currentGallery.length;
+  updateGallery(1);
+  startAutoSlide();
+});
+	
+	/*------------------------------------END-------------------------*/
 	let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
@@ -614,7 +723,7 @@ prev.onclick = function(){
 // auto run slider
 let refreshInterval = setInterval(() => {
     next.click();
-}, 5000)
+}, 8000)
 function showSlider(){
     // remove item active old
     let itemActiveOld = document.querySelector('.slider .list .item.active');
@@ -631,7 +740,7 @@ function showSlider(){
     clearInterval(refreshInterval);
     refreshInterval = setInterval(() => {
         next.click();
-    }, 5000)
+    }, 8000)
 }
 function setPositionThumbnail () {
     let thumbnailActive = document.querySelector('.thumbnail .item.active');
