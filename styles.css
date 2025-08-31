@@ -1839,6 +1839,18 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 		width: 20px !important;
 	}}
 
+.thumbnail .item{
+    width: 120px;
+    height: 150px;
+    filter: brightness(.5);
+    transition: .5s;
+    flex-shrink: 0;
+	
+}
+
+.thumbnail{
+	top: 80vh;
+}
 /*-------------------------------------------MOBIL UI----------------------*/
 
 .hamburger {
@@ -1932,6 +1944,13 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 		
 	
 	}
+	
+	.description{
+		margin-top: -1vh!important;
+		
+	}
+	
+	
 }
 
 @keyframes bounce {
