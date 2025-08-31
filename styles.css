@@ -1768,9 +1768,10 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
 	
 	li:hover .content{
 		width: 98vw !important;
-		height: 100vh !important;
+		height: 95vh !important;
 		white-space: normal;
 		margin-top: -35vh!important;
+		overflow: scroll;
 		
 		
 	}
@@ -1797,12 +1798,17 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
 
 	.experience-list{
 		display: flex !important;
-		max-width: 70vw!important;
-		overflow: scroll;
+		flex-wrap: wrap !important;
+		width: 80vw!important;
+		overflow: auto;
 		white-space: normal;
-		flex-direction: column !important;
 		padding: 50px!important;
-		
+		margin: 0 auto;
+		gap: 60px;
+	   background: #000000;
+background: linear-gradient(0deg, rgba(0, 0, 0, 1) 68%, rgba(66, 61, 61, 1) 94%);
+		border: solid 1px rgba(106,23,187,1.00);
+	
 	}
 	
 	.grid-container{
@@ -1822,8 +1828,27 @@ background: linear-gradient(153deg, rgba(32, 199, 160, 0.1) 0%, rgba(0, 0, 0, 1)
 		margin-left: -25px;
 		font-size: 10px;
 	}
+	
+	.certificates{
+		
 	}
+.grid-container-3{
+    width: 100vw;
+    height: 100vh;
+    display: grid; /* hiányzott */
+    grid-template-columns: repeat(1, 1fr);
+    overflow: auto; /* scroll-hoz auto a jobb */
+    min-width: 85% !important;
+    background-color: black;
+}
 
+.grid-3-cards img,
+.mini-site img {
+    width: 100%;  /* kitölti a szülő div-et */
+    height: 100%; /* kitölti a szülő div-et */
+    object-fit: cover; /* megtartja az arányokat */
+}
+}
 
 .margin{
 display: inline-flex; /* szép igazítás miatt */
@@ -1831,6 +1856,3 @@ display: inline-flex; /* szép igazítás miatt */
   gap: 15px; /* kép és szöveg közé is */
 
 }
-
-
-
