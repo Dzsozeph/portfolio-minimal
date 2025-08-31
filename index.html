@@ -483,14 +483,18 @@
         </div>
     </div>
 		
-<div class="journey-start-button">
-  <a href="javascript:void(0)">Start your journey<br>
-	NOW</a>
-</div>
+<button class="journey-start-button red-hat-text-font">
+  <a href="javascript:void(0)">Start your journey</a>
+		</button>
 
 <!-- Modal Galéria -->
 <div id="galleryModal" class="gallery-modal">
   <span class="close-gallery">&times;</span>
+	
+	  <aside class="gallery-thumbnails">
+    <ul id="thumbnails-list"></ul>
+  </aside>
+	
   <div class="gallery-content">
     <button id="gallery-prev">‹</button>
     <div class="gallery-inner">
@@ -630,10 +634,65 @@ const galleryCaption = document.getElementById('gallery-caption');
 const closeGallery = document.querySelector('.close-gallery');
 const galleryPrev = document.getElementById('gallery-prev');
 const galleryNext = document.getElementById('gallery-next');
+	const thumbnailsList = document.getElementById('thumbnails-list');
 
 let currentGallery = [];
 let currentIndex = 0;
 let autoSlideInterval;
+	function updateGallery() {
+  galleryImage.src = currentGallery[currentIndex].src;
+  galleryCaption.textContent = currentGallery[currentIndex].caption || "";
+
+  // thumbnail border update
+  const thumbnailImgs = thumbnailsList.querySelectorAll("li img");
+  thumbnailImgs.forEach((img, idx) => {
+    img.style.border = idx === currentIndex ? "3px solid #20c7a0" : "none";
+  });
+}
+
+// --- Thumbnailok létrehozása ---
+function populateThumbnails() {
+  thumbnailsList.innerHTML = "";
+  currentGallery.forEach((item, idx) => {
+    const li = document.createElement("li");
+    const thumb = document.createElement("img");
+    thumb.src = item.src;
+    thumb.alt = item.caption;
+    thumb.style.cursor = "pointer";
+    thumb.addEventListener("click", () => {
+      currentIndex = idx;
+      updateGallery();
+    });
+    li.appendChild(thumb);
+    thumbnailsList.appendChild(li);
+  });
+}
+
+// --- Megnyitás ---
+journeyBtn.addEventListener('click', () => {
+  currentGallery = galleryData[0]; // alap Nyár
+  if(currentGallery.length > 0){
+    currentIndex = 0;
+    populateThumbnails();
+    updateGallery();
+    galleryModal.style.display = 'flex';
+  }
+});
+
+// --- Bezárás ---
+closeGallery.addEventListener('click', () => {
+  galleryModal.style.display = 'none';
+});
+
+// --- Előző / Következő ---
+galleryPrev.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+  updateGallery();
+});
+galleryNext.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % currentGallery.length;
+  updateGallery();
+});
 
 // --- Kép frissítése animációval ---
 function updateGallery(direction = 1) {
