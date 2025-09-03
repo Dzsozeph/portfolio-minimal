@@ -1456,8 +1456,9 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 .gallery-thumbnails {
   position: absolute;
   left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 30%;
+  border: 1px solid white;
+	z-index: 9999999;
 }
 .gallery-thumbnails ul {
   list-style: none;
@@ -2001,6 +2002,7 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 	}
 	
 	.grid-container{
+		top: 45vh;
 	    grid-template-columns: repeat(1, 1fr);
 		overflow: scroll;
 	    min-width: 85% !important;

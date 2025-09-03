@@ -635,21 +635,11 @@ const galleryCaption = document.getElementById('gallery-caption');
 const closeGallery = document.querySelector('.close-gallery');
 const galleryPrev = document.getElementById('gallery-prev');
 const galleryNext = document.getElementById('gallery-next');
-	const thumbnailsList = document.getElementById('thumbnails-list');
+const thumbnailsList = document.getElementById('thumbnails-list');
 
 let currentGallery = [];
 let currentIndex = 0;
 let autoSlideInterval;
-	function updateGallery() {
-  galleryImage.src = currentGallery[currentIndex].src;
-  galleryCaption.textContent = currentGallery[currentIndex].caption || "";
-
-  // thumbnail border update
-  const thumbnailImgs = thumbnailsList.querySelectorAll("li img");
-  thumbnailImgs.forEach((img, idx) => {
-    img.style.border = idx === currentIndex ? "3px solid #20c7a0" : "none";
-  });
-}
 
 // --- Thumbnailok létrehozása ---
 function populateThumbnails() {
@@ -657,49 +647,26 @@ function populateThumbnails() {
   currentGallery.forEach((item, idx) => {
     const li = document.createElement("li");
     const thumb = document.createElement("img");
-    thumb.src = item.src;
-    thumb.alt = item.caption;
+    
+    // ha nincs src, használjunk placeholdert
+    thumb.src = item.src || 'https://via.placeholder.com/80x60?text=No+Image';
+    thumb.alt = item.caption || 'No caption';
     thumb.style.cursor = "pointer";
+    
     thumb.addEventListener("click", () => {
       currentIndex = idx;
       updateGallery();
     });
+    
     li.appendChild(thumb);
     thumbnailsList.appendChild(li);
   });
 }
 
-// --- Megnyitás ---
-journeyBtn.addEventListener('click', () => {
-  currentGallery = galleryData[0]; // alap Nyár
-  if(currentGallery.length > 0){
-    currentIndex = 0;
-    populateThumbnails();
-    updateGallery();
-    galleryModal.style.display = 'flex';
-  }
-});
-
-// --- Bezárás ---
-closeGallery.addEventListener('click', () => {
-  galleryModal.style.display = 'none';
-});
-
-// --- Előző / Következő ---
-galleryPrev.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
-  updateGallery();
-});
-galleryNext.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % currentGallery.length;
-  updateGallery();
-});
-
 // --- Kép frissítése animációval ---
 function updateGallery(direction = 1) {
   galleryImage.classList.remove("slide-in-left", "slide-in-right");
-
-  void galleryImage.offsetWidth; // újraindítja az animációt
+  void galleryImage.offsetWidth; // animáció reset
 
   if (direction === 1) {
     galleryImage.classList.add("slide-in-right");
@@ -709,6 +676,12 @@ function updateGallery(direction = 1) {
 
   galleryImage.src = currentGallery[currentIndex].src;
   galleryCaption.textContent = currentGallery[currentIndex].caption || "";
+
+  // thumbnail border update
+  const thumbnailImgs = thumbnailsList.querySelectorAll("li img");
+  thumbnailImgs.forEach((img, idx) => {
+    img.style.border = idx === currentIndex ? "3px solid #20c7a0" : "none";
+  });
 }
 
 // --- Automatikus váltás ---
@@ -726,9 +699,11 @@ function stopAutoSlide() {
 
 // --- Megnyitás ---
 journeyBtn.addEventListener('click', () => {
-  currentGallery = galleryData[itemActive] || []
+  const itemActive = 0; // <<< ideiglenesen fixen az első galéria (állítsd majd dinamikusra ha kell!)
+  currentGallery = galleryData[itemActive] || [];
   if (currentGallery.length > 0) {
     currentIndex = 0;
+    populateThumbnails();
     updateGallery();
     galleryModal.style.display = 'flex';
     startAutoSlide();
@@ -754,6 +729,13 @@ galleryNext.addEventListener('click', () => {
   updateGallery(1);
   startAutoSlide();
 });
+	
+	
+	
+	
+	
+	
+	
 	
 	/*------------------------------------END-------------------------*/
 	let items = document.querySelectorAll('.slider .list .item');
