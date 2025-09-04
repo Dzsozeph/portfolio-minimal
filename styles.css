@@ -194,7 +194,7 @@ body{
   animation: animate-gradient 10s linear infinite, slideInRight 2s ease-out forwards;
   white-space: nowrap;
   font-size: 5rem;
-		z-index: 12;
+		z-index: 1;
 }
 
 @keyframes animate-gradient {
@@ -302,6 +302,7 @@ padding: 45px;
 right: 5vw;
 pointer-events: auto; /* ⬅️ csak hover alatt legyen kattintható */
 overflow: hidden;
+z-index: 2;
 
 
 }
@@ -858,6 +859,10 @@ top: 150px !important;
 	z-index: 99999;
 	pointer-events: auto;
 	cursor: grab;
+	
+}
+
+.photographer:c{
 	
 }
 .photographer:hover {
@@ -1426,7 +1431,7 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
   background: none;
   border: none;
   font-size: 3rem;
-  color: white;
+  color: rgba(11,199,143,1.00);
   cursor: pointer;
 }
 
@@ -1447,30 +1452,37 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 
 .close-gallery {
   position: absolute;
-  top: 20px;
+  bottom: 20px;
   right: 40px;
   font-size: 3rem;
-  color: white;
+  color: rgba(11,199,143,1.00);
   cursor: pointer;
+  z-index: 2;
 }
 .gallery-thumbnails {
   position: absolute;
-  left: 20px;
-  top: 30%;
-  border: 1px solid white;
-	z-index: 9999999;
+  right: 20px;
+  top: 2.5vh;
+  z-index: 1;
+  width: 25vw;     /* ne legyen túl nagy */
+  height: 80vh;    /* magasabb, hogy több thumb elférjen */
+  overflow-y: auto; /* görgethető, ha több van */
+  background: rgba(0,0,0,0.6); /* hogy kiemelkedjen a háttérből */
+
+  border-radius: 10px;
 }
+
 .gallery-thumbnails ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 .gallery-thumbnails li {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .gallery-thumbnails img {
-  width: 80px;
-  height: 60px;
+  display: block;   /* szünteti az inline space-t */
+  width: 130px;
+  height: 130px;
   object-fit: cover;
   border-radius: 5px;
   transition: border 0.3s;

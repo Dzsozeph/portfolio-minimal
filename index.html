@@ -492,9 +492,9 @@
 <div id="galleryModal" class="gallery-modal">
   <span class="close-gallery">&times;</span>
 	
-	  <aside class="gallery-thumbnails">
+	  <div class="gallery-thumbnails">
     <ul id="thumbnails-list"></ul>
-  </aside>
+  </div>
 	
   <div class="gallery-content">
     <button id="gallery-prev">‹</button>
@@ -684,14 +684,14 @@ function updateGallery(direction = 1) {
   });
 }
 
-// --- Automatikus váltás ---
+/*/ --- Automatikus váltás ---
 function startAutoSlide() {
   stopAutoSlide(); 
   autoSlideInterval = setInterval(() => {
     currentIndex = (currentIndex + 1) % currentGallery.length;
     updateGallery(1);
   }, 4000);
-}
+}*/
 
 function stopAutoSlide() {
   clearInterval(autoSlideInterval);
