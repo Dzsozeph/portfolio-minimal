@@ -316,9 +316,8 @@ z-index: 2;
   opacity: 0;
   transition: all 1s ease;
   right: -2vw !important;
-  z-index: 2;
   pointer-events: none;
-  
+  z-index: 3;
 }
 	
 	.button{
@@ -463,13 +462,13 @@ li:hover .vonal3{
   padding: 50px;
   opacity: 0;
   transition: all 1s ease;
-background: #128766;
-background: linear-gradient(300deg, rgba(18, 135, 102, 0.4) 0%, rgba(14, 106, 80, 0.4) 0%, rgba(12, 88, 67, 0.4) 6%, rgba(9, 67, 51, 0.4) 8%, rgba(0, 0, 0, 0.4) 13%, rgba(22, 46, 39, 0.4) 62%, rgba(0, 0, 0, 0.4) 100%);
+  background: #128766;
+  background: linear-gradient(300deg, rgba(18, 135, 102, 0.4) 0%, rgba(14, 106, 80, 0.4) 0%, rgba(12, 88, 67, 0.4) 6%, rgba(9, 67, 51, 0.4) 8%, rgba(0, 0, 0, 0.4) 13%, rgba(22, 46, 39, 0.4) 62%, rgba(0, 0, 0, 0.4) 100%);
   z-index: 10;
-  margin-top: -10vh;
+  margin-top: -20vh;
   left: 10vw;
-pointer-events: none;
- box-shadow: 0 3px 3px 0 #32B896;
+  pointer-events: none;
+  box-shadow: 0 3px 3px 0 #32B896;
 
 }
 
@@ -482,7 +481,7 @@ pointer-events: none;
   aspect-ratio: 16 / 9;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
-  width: clamp(250px, 150px, 20px)
+
   
 }
 	
@@ -1615,7 +1614,6 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 	 
 	.title{
 		font-size:4.5rem;
-		z-index: 9999999;
 	}
 	
 
