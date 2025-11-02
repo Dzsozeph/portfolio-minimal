@@ -258,10 +258,17 @@
       <li class="red-hat-text-font">Projects
 		  
 		  <div class="grid-container">
-	<a href="https://dzsozeph.github.io/psychedelicwiki" target="_blank">
+	<a href="https://dzsozeph.github.io/" target="_blank">
   <div class="mini-site">
     <img src="Képkivágás.png" alt="Site 1">
   </div>
+		
+<a href="https://dzsozeph.github.io/solarexplorer" target="_blank">
+  <div class="mini-site">
+    <img src="sse.PNG" alt="Site 7">
+  </div>
+	</a>
+		
 		</a>
 	<a href="https://dzsozeph.github.io/tauribfa" target="_blank">
   <div class="mini-site">
@@ -273,7 +280,7 @@
     <img src="wood.png" alt="Site 3">
   </div>
 			</a>
-	<a href="https://dzsozeph.github.io/portfolio" target="_blank">
+	<a href="https://dzsozeph.github.io/" target="_blank">
   <div class="mini-site">
     <img src="portfolio.png" alt="Site 4">
   </div>
@@ -283,11 +290,7 @@
     <img src="td.png" alt="Site 5">
   </div>
 		</a>
-	<a href="https://dzsozeph.github.io/pasja" target="_blank">
-  <div class="mini-site">
-    <img src="pasja.png" alt="Site 6">
-  </div>
-		</a>
+
 			<a href="https://dzsozeph.github.io/cmgoldtactics" target="_blank">
   <div class="mini-site">
     <img src="cmgold.PNG" alt="Site 7">
@@ -301,11 +304,7 @@
 	</a>	
 
 
-						<a href="https://dzsozeph.github.io/solarexplorer" target="_blank">
-  <div class="mini-site">
-    <img src="sse.PNG" alt="Site 7">
-  </div>
-	</a>
+
 </div>
 		  </li>
       <li class="red-hat-text-font">Experience
@@ -315,6 +314,7 @@
 		
 				<div class="experience-list margin">
 					
+					<span class="mobile-title">Technologys what I have worked with</span>
 			<img src="html2.png" alt="html" width="20px">HTML
 			<img src="css.png" alt="html" width="20px">CSS
 			<img src="js.png" alt="html" width="20px">JAVASCRIPT
@@ -323,7 +323,27 @@
 		    <img src="sql.png" alt="html" width="20px">SQL
 			<img src="c++.png" alt="html" width="20px">C++
             <img src="chip.png" alt="html" width="40px">AI Tools
-						
+						<div class="grid-container-3">
+							<span class="mobile-title">Certificates</span>
+					<div class="certificates">
+								<div class="grid-3-cards">
+    <img src="certificates/htmlessential.png">
+  </div>
+		<div class="grid-3-cards">
+    <img src="certificates/cssfunda.png" alt="Site 1">
+  </div>
+		<div class="grid-3-cards">
+    <img src="certificates/advancedcss.png" alt="Site 1">
+  </div>
+	<div class="grid-3-cards">
+    <img src="certificates/introductionjs.png" alt="Site 1">
+  </div>
+							<div class="grid-3-cards">
+    <img src="certificates/certificate-main.png" alt="Site 1">
+  </div>
+					</div>
+	  </div>		  
+			
 		   </div>
 			
 			
@@ -464,10 +484,27 @@
         </div>
     </div>
 		
-		
-<!--<button class="journey-start-button">
-	<a class="felipa-regular">Start your yourner<br>
-		NOW</a></button>-->
+<button class="journey-start-button red-hat-text-font">
+  <a href="javascript:void(0)">Start your journey</a>
+		</button>
+
+<!-- Modal Galéria -->
+<div id="galleryModal" class="gallery-modal">
+  <span class="close-gallery">&times;</span>
+	
+	  <div class="gallery-thumbnails">
+    <ul id="thumbnails-list"></ul>
+  </div>
+	
+  <div class="gallery-content">
+    <button id="gallery-prev">‹</button>
+    <div class="gallery-inner">
+      <img id="gallery-image" src="" alt="Gallery Image">
+      <div id="gallery-caption" class="gallery-caption"></div>
+    </div>
+    <button id="gallery-next">›</button>
+  </div>
+</div>
 </section>
 <script>
 	let currentSlide = 0;
@@ -475,7 +512,6 @@
     const preloader = document.getElementById("preloader");
     preloader.classList.add("fade-out");
 
-  
     setTimeout(() => {
       preloader.remove();
     }, 2000); 
@@ -491,8 +527,7 @@ document.addEventListener('mousemove', e => {
 });
 
 function animate() {
-  // Egyszerű lineáris interpoláció (lerp) a sima lassításhoz
-  currentX += (mouseX - currentX) * 0.1; // 0.1 sebesség, lehet változtatni (0 < speed < 1)
+  currentX += (mouseX - currentX) * 0.1; 
   currentY += (mouseY - currentY) * 0.1;
 
   circle.style.transform = `translate(calc(${currentX}px - 50%), calc(${currentY}px - 50%))`;
@@ -509,7 +544,6 @@ function openPhotographer() {
   main.style.display = "none";
   photo.style.display = "block";
 
-  // trigger fade-in
   setTimeout(() => {
     photo.style.opacity = "1";
   }, 10);
@@ -519,15 +553,13 @@ function closePhotographer() {
   const main = document.getElementById("main-content");
   const photo = document.getElementById("photographer-page");
 
-  // trigger fade-out
   photo.style.opacity = "0";
   
   setTimeout(() => {
     photo.style.display = "none";
     main.style.display = "block";
-  }, 500); // ugyanannyi mint a CSS transition idő
+  }, 500); 
 }
-	
 
 	
 	
@@ -568,6 +600,144 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 	*/
+	
+	
+	// Példa képadatbázis
+const galleryData = {
+  0: [
+    { src: "1.jpg", caption: "Switzerland – Mountain view" },
+    { src: "2.jpg", caption: "Switzerland – Lake in the Alps" },
+    { src: "3.jpg", caption: "Switzerland – Village panorama" },
+    { src: "4.jpg", caption: "Switzerland – Sunset in the valley" }
+  ],
+  1: [
+    { src: "", caption: "" },
+    { src: "", caption: "" }
+  ],
+  2: [
+    { src: "", caption: "" },
+    { src: "", caption: "" }
+  ],
+  3: [
+    { src: "", caption: "Budapest Parliament" },
+    { src: "", caption: "" }
+  ],
+  4: [
+    { src: "", caption: "" },
+    { src: "", caption: "" }
+  ]
+};
+
+const journeyBtn = document.querySelector('.journey-start-button');
+const galleryModal = document.getElementById('galleryModal');
+const galleryImage = document.getElementById('gallery-image');
+const galleryCaption = document.getElementById('gallery-caption');
+const closeGallery = document.querySelector('.close-gallery');
+const galleryPrev = document.getElementById('gallery-prev');
+const galleryNext = document.getElementById('gallery-next');
+const thumbnailsList = document.getElementById('thumbnails-list');
+
+let currentGallery = [];
+let currentIndex = 0;
+let autoSlideInterval;
+
+// --- Thumbnailok létrehozása ---
+function populateThumbnails() {
+  thumbnailsList.innerHTML = "";
+  currentGallery.forEach((item, idx) => {
+    const li = document.createElement("li");
+    const thumb = document.createElement("img");
+    
+    // ha nincs src, használjunk placeholdert
+    thumb.src = item.src || 'https://via.placeholder.com/80x60?text=No+Image';
+    thumb.alt = item.caption || 'No caption';
+    thumb.style.cursor = "pointer";
+    
+    thumb.addEventListener("click", () => {
+      currentIndex = idx;
+      updateGallery();
+    });
+    
+    li.appendChild(thumb);
+    thumbnailsList.appendChild(li);
+  });
+}
+
+// --- Kép frissítése animációval ---
+function updateGallery(direction = 1) {
+  galleryImage.classList.remove("slide-in-left", "slide-in-right");
+  void galleryImage.offsetWidth; // animáció reset
+
+  if (direction === 1) {
+    galleryImage.classList.add("slide-in-right");
+  } else {
+    galleryImage.classList.add("slide-in-left");
+  }
+
+  galleryImage.src = currentGallery[currentIndex].src;
+  galleryCaption.textContent = currentGallery[currentIndex].caption || "";
+
+  // thumbnail border update
+  const thumbnailImgs = thumbnailsList.querySelectorAll("li img");
+  thumbnailImgs.forEach((img, idx) => {
+    img.style.border = idx === currentIndex ? "3px solid #20c7a0" : "none";
+  });
+}
+
+/*/ --- Automatikus váltás ---
+function startAutoSlide() {
+  stopAutoSlide(); 
+  autoSlideInterval = setInterval(() => {
+    currentIndex = (currentIndex + 1) % currentGallery.length;
+    updateGallery(1);
+  }, 4000);
+}*/
+
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
+
+// --- Megnyitás ---
+journeyBtn.addEventListener('click', () => {
+  const itemActive = 0; // <<< ideiglenesen fixen az első galéria (állítsd majd dinamikusra ha kell!)
+  currentGallery = galleryData[itemActive] || [];
+  if (currentGallery.length > 0) {
+    currentIndex = 0;
+    populateThumbnails();
+    updateGallery();
+    galleryModal.style.display = 'flex';
+    startAutoSlide();
+  }
+});
+
+// --- Bezárás ---
+closeGallery.addEventListener('click', () => {
+  galleryModal.style.display = 'none';
+  stopAutoSlide();
+});
+
+// --- Előző ---
+galleryPrev.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+  updateGallery(-1);
+  startAutoSlide();
+});
+
+// --- Következő ---
+galleryNext.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % currentGallery.length;
+  updateGallery(1);
+  startAutoSlide();
+});
+	
+	
+	
+	
+	
+	
+	
+	
+	/*------------------------------------END-------------------------*/
 	let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
@@ -595,7 +765,7 @@ prev.onclick = function(){
 // auto run slider
 let refreshInterval = setInterval(() => {
     next.click();
-}, 5000)
+}, 8000)
 function showSlider(){
     // remove item active old
     let itemActiveOld = document.querySelector('.slider .list .item.active');
@@ -612,7 +782,7 @@ function showSlider(){
     clearInterval(refreshInterval);
     refreshInterval = setInterval(() => {
         next.click();
-    }, 5000)
+    }, 8000)
 }
 function setPositionThumbnail () {
     let thumbnailActive = document.querySelector('.thumbnail .item.active');
