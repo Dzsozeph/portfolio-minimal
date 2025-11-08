@@ -224,7 +224,7 @@ body{
 		width: 100vw;
 		min-height: 100vh;
 		background-image: url("metest.png");
-		background-size: 40%;
+		background-size: 38%;
 		background-repeat: no-repeat;
 		background-position: left top 10%;
 		transition: transform 0.5s ease; 
@@ -861,9 +861,7 @@ top: 150px !important;
 	
 }
 
-.photographer:c{
-	
-}
+
 .photographer:hover {
 	box-shadow: 0 0 20px aquamarine;
 }
@@ -1326,7 +1324,7 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 
 
 .journey-start-button {
- --color: #12A09E;
+ --color: white;
  --color2: rgb(10, 25, 30);
  padding: 1em 0.1em;
  background-color: transparent;
@@ -1391,6 +1389,9 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 
 }
 
+.journey-start-button a:hover{
+    color: black;
+    }
 .gallery-modal {
   display: none; 
   position: fixed;
@@ -1918,7 +1919,7 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
   top: 40%;
   right: 0;
   width: 30%;
-  min-height: 20%;
+  min-height: 10%;
   background-color: rgba(0, 0, 0, 1);
   color: white;
   z-index: 12;
@@ -1927,6 +1928,7 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
   border-radius: 20px;
   white-space: nowrap;
   animation: slideInRight ease 1s;
+  padding: 20px;
 
 }
 
@@ -1945,13 +1947,15 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 
 .close-btn {
   position: absolute;
-  top: 70px;
+  bottom: -10%;
   right: 2px;
   font-size: 30px;
   background: none;
   border: none;
-  color: white;
+  color: rgba(141,111,227,1.00);
   cursor: pointer;
+  left: 50%;
+  transform: translateX(-50%);
 
 }
 
