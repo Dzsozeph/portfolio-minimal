@@ -475,6 +475,9 @@ li:hover .vonal3{
 pointer-events: none;
  box-shadow: 0 3px 3px 0 #32B896;
 	margin-top: -220px;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 }
@@ -489,7 +492,11 @@ pointer-events: none;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+  width: 100%; /* kitölti a grid cellát */
+>>>>>>> Stashed changes
 =======
   width: 100%; /* kitölti a grid cellát */
 >>>>>>> Stashed changes
