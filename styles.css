@@ -351,7 +351,7 @@ z-index: 999999;
 		cursor: grab;
 		left: 40vw;
 		animation: fall 2s ease-in forwards;
-		z-index: 12;
+		z-index: -1;
 		margin-top: 5vh;
 	
 	}
@@ -486,21 +486,13 @@ li:hover .vonal3{
   background: linear-gradient(300deg, rgba(18, 135, 102, 0.4) 0%, rgba(14, 106, 80, 0.4) 0%, rgba(12, 88, 67, 0.4) 6%, rgba(9, 67, 51, 0.4) 8%, rgba(0, 0, 0, 0.4) 13%, rgba(22, 46, 39, 0.4) 62%, rgba(0, 0, 0, 0.4) 100%);
   z-index: 10;
   margin-top: -20vh;
-  left: 10vw;
-<<<<<<< Updated upstream
+  left: 6vw;
   pointer-events: none;
   box-shadow: 0 3px 3px 0 #32B896;
-=======
 pointer-events: none;
  box-shadow: 0 3px 3px 0 #32B896;
 	margin-top: -220px;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
 
 }
 
@@ -513,20 +505,7 @@ pointer-events: none;
   aspect-ratio: 16 / 9;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-
-=======
   width: 100%; /* kitölti a grid cellát */
->>>>>>> Stashed changes
-=======
-  width: 100%; /* kitölti a grid cellát */
->>>>>>> Stashed changes
-=======
-  width: 100%; /* kitölti a grid cellát */
->>>>>>> Stashed changes
-  
 }
 	
 
@@ -2117,3 +2096,60 @@ display: inline-flex; /* szép igazítás miatt */
   gap: 15px; /* kép és szöveg közé is */
 
 }
+
+
+
+.certificates-desktop {
+    position: relative;
+    margin-top: -45vh;              /* li alá nyíljon */
+    left: -33vw;
+    width: 90vw;            /* ⬅️ ITT tudod méretezni */
+    height: 40vh;           /* ⬅️ ITT is */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.grid-container-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 oszlop a harmadik nagy képnek */
+    grid-auto-rows: auto;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+    overflow-y: scroll;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 99;
+}
+
+/* Alap kártyák (1-4 kép) */
+.grid-4-cards {
+    width: 100%;
+    height: auto;
+}
+
+/* 5. kép nagyobb, középre igazítva a harmadik oszlopban */
+.grid-4-cards:last-child {
+    grid-column: 3;            /* 3. oszlop */
+    grid-row: 1;                /* az első sorban kezdődik */
+    justify-self: center;       /* vízszintesen középre */
+    align-self: center;         /* függőlegesen középre */
+    height: 50%;                /* nagyobb magasság, a sorhoz képest */
+    max-height: 300px;          /* opcionális limit */
+    width: auto;                /* automatikusan arányosan */
+}
+.grid-4-cards img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
+}
+
+li:hover .content3 { 
+    opacity: 1; 
+
+}
+.eqp-title {
+    position: relative; /* 🔑 EZ HIÁNYZOTT */
+}
+

@@ -159,6 +159,35 @@
 
 
 		</li>
+        
+        <li class="eqp-title" style="z-index: 999">Certificates
+            	<span class="vonal3"></span>
+		<div class="certificates-desktop content3">
+  <div class="grid-container-4">
+
+    <div class="grid-4-cards">
+      <img src="certificates/htmlessential.png">
+    </div>
+
+    <div class="grid-4-cards">
+      <img src="certificates/cssfunda.png">
+    </div>
+
+    <div class="grid-4-cards">
+      <img src="certificates/advancedcss.png">
+    </div>
+
+    <div class="grid-4-cards">
+      <img src="certificates/introductionjs.png">
+    </div>
+
+    <div class="grid-4-cards">
+      <img src="certificates/certificate-main.png">
+    </div>
+
+  </div>
+</div>
+        </li>
 		<!--
 		<li class="eqp-title" style="z-index: 999">Equipments
 		<div class="grid-container2">
@@ -383,7 +412,7 @@
         <!-- list Items -->
 			 
         <div class="list">
-            <div class="item active">
+            <div class="item active" data-gallery="0">
                 <img src="image/jozsi4.jpg">
                 <div class="content-galery">
 				
@@ -396,7 +425,7 @@
                 </div>
 				
             </div>
-            <div class="item">
+            <div class="item" data-gallery="1">
                 <img src="image/jozsi3.jpg">
                 <div class="content-galery">
                     <p>Let's discover</p>
@@ -720,16 +749,19 @@ function stopAutoSlide() {
 }
 
 // --- Megnyitás ---
-journeyBtn.addEventListener('click', () => {
-  const itemActive = 0; // <<< ideiglenesen fixen az első galéria (állítsd majd dinamikusra ha kell!)
-  currentGallery = galleryData[itemActive] || [];
-  if (currentGallery.length > 0) {
-    currentIndex = 0;
-    populateThumbnails();
-    updateGallery();
-    galleryModal.style.display = 'flex';
-    startAutoSlide();
-  }
+  journeyBtn.addEventListener('click', () => {
+    // Lekérjük az aktuális slide galéria indexét
+    const activeSlide = document.querySelector('.slider .list .item.active');
+    const galleryIndex = activeSlide ? parseInt(activeSlide.dataset.gallery) : 0;
+
+    currentGallery = galleryData[galleryIndex] || [];
+    if (currentGallery.length > 0) {
+        currentIndex = 0;
+        populateThumbnails();
+        updateGallery();
+        galleryModal.style.display = 'flex';
+        startAutoSlide();
+    }
 });
 
 // --- Bezárás ---
