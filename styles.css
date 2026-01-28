@@ -431,7 +431,7 @@ z-index: 999999;
 
 .vonal3{
 		position: fixed;
-		top: 52vh;
+		top: 53vh;
 		margin: 20px;
 		width: 0vw;
 		height: 1px;
@@ -2101,7 +2101,7 @@ display: inline-flex; /* szép igazítás miatt */
 
 .certificates-desktop {
     position: relative;
-    margin-top: -45vh;              /* li alá nyíljon */
+    margin-top: -52vh;              /* li alá nyíljon */
     left: -33vw;
     width: 90vw;            /* ⬅️ ITT tudod méretezni */
     height: 40vh;           /* ⬅️ ITT is */
@@ -2115,8 +2115,8 @@ display: inline-flex; /* szép igazítás miatt */
     grid-template-columns: 1fr 1fr 1fr; /* 3 oszlop a harmadik nagy képnek */
     grid-auto-rows: auto;
     gap: 10px;
-    width: 100%;
-    height: auto;
+    width: 90vw;
+    height: 90vh;
     overflow-y: scroll;
     background-color: rgba(0,0,0,0.8);
     z-index: 99;
@@ -2137,12 +2137,15 @@ display: inline-flex; /* szép igazítás miatt */
     height: 50%;                /* nagyobb magasság, a sorhoz képest */
     max-height: 300px;          /* opcionális limit */
     width: auto;                /* automatikusan arányosan */
+    border: solid 1px purple;
 }
 .grid-4-cards img {
+    padding: 10px;
     width: 100%;
     height: auto;
     object-fit: cover;
     z-index: 1;
+    border: solid 1px purple;
 }
 
 li:hover .content3 { 
