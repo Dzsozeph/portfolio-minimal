@@ -1053,6 +1053,20 @@ hamburgerIcon.addEventListener('click', () => {
     location.reload();
   });
 	
+    images.forEach(img => {
+  container.innerHTML += `
+    <img src="${img.full}">
+  `;
+});
+    container.insertAdjacentHTML('beforeend', `
+  <img 
+    src="${img.thumb}"
+    data-full="${img.full}"
+    loading="lazy"
+    class="gallery-img"
+  >
+`);
+    
 	
 </script>
 
