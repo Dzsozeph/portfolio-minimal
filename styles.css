@@ -1296,6 +1296,18 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
     
 }
 
+.flagen{
+    display: inline-block;
+	position: absolute;
+	top: -16vh;
+	width: 250px;
+	height: 150px;
+	background-image: url("flagen.png");
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+}
+
 .flagnl{
 	display: inline-block;
 	position: absolute;

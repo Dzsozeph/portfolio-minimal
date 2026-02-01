@@ -425,6 +425,18 @@
                 </div>
 				
             </div>
+              <div class="item" data-gallery="2">
+                <img src="image/england5.jpg">
+                <div class="content-galery">
+                    <p>Let's discover</p>
+                    <h2>England</h2>
+                    <p>
+                        First abroad ever
+                    </p>
+					<span class="flagen"></span>
+                </div>
+            </div>
+            
             <div class="item" data-gallery="1">
                 <img src="image/jozsi3.jpg">
                 <div class="content-galery">
@@ -465,7 +477,7 @@
                     <p>Let's discover</p>
                     <h2>Slovakia</h2>
                     <p>
-                        Hmm... the High Tatras, 
+                        Hmm... the Carphatian jeweil, High Tatras, 
                     </p>
 					<span class="flagslv"></span>
                 </div>
@@ -484,6 +496,13 @@
                     Switzerland
                  </div>
             </div>
+              <div class="item">
+                <img src="image/england5.jpg">
+                <div class="content-galery">
+                    England
+                </div>
+            </div>
+            
             <div class="item">
                 <img src="image/jozsi3.jpg">
                 <div class="content-galery">
@@ -496,6 +515,7 @@
                    Belgium
                 </div>
             </div>
+            
             <div class="item">
                 <img src="image/sztgy.jpg">
                 <div class="content-galery">
@@ -631,58 +651,129 @@ document.addEventListener("DOMContentLoaded", () => {
 	// Példa képadatbázis
 const galleryData = {
   0: [
-      { src: "12.jpg", caption: "Switzerland – Stockhorn, Berge Seen" },
-    { src: "1.jpg", caption: "Switzerland – Muotathal" },
-    { src: "2.jpg", caption: "Switzerland – Muotathal" },
-    { src: "6.jpg", caption: "Switzerland – Leukerbad" },
-    { src: "7.jpg", caption: "Switzerland – Leukerbad" },
-    { src: "8.jpg", caption: "Switzerland – Leukerbad" },
-    { src: "9.jpg", caption: "Switzerland – Leukerbad" },
-      { src: "25.jpg", caption: "Switzerland – Stockhorn" },
-    { src: "10.jpg", caption: "Switzerland – Lauterbrunnen" },
+      { src: "image/ch/12.jpg", caption: "Switzerland – Stockhorn, Berge Seen" },
+    { src: "image/ch/1.jpg", caption: "Switzerland – Muotathal" },
+    { src: "image/ch/2.jpg", caption: "Switzerland – Muotathal" },
+    { src: "image/ch/6.jpg", caption: "Switzerland – Leukerbad" },
+    { src: "image/ch/7.jpg", caption: "Switzerland – Leukerbad" },
+    { src: "image/ch/8.jpg", caption: "Switzerland – Leukerbad" },
+    { src: "image/ch/9.jpg", caption: "Switzerland – Leukerbad" },
+      { src: "image/ch/25.jpg", caption: "Switzerland – Stockhorn" },
+    { src: "image/ch/10.jpg", caption: "Switzerland – Lauterbrunnen" },
       
-      { src: "13.jpg", caption: "Switzerland – Jungfrau glacier " },
-      { src: "14.jpg", caption: "Switzerland – Brienz" },
-      { src: "15.jpg", caption: "Switzerland – Brienz" },
-      { src: "17.jpg", caption: "Switzerland – Brienz" },
-      { src: "19.jpg", caption: "Switzerland – Stockhorn" },
-      { src: "21.jpg", caption: "Switzerland – Stockhorn" },
-      { src: "22.jpg", caption: "Switzerland – Thun lake" },
-      { src: "23.jpg", caption: "Switzerland – On the way..." },
+      { src: "image/ch/13.jpg", caption: "Switzerland – Jungfrau glacier " },
+      { src: "image/ch/14.jpg", caption: "Switzerland – Brienz" },
+      { src: "image/ch/15.jpg", caption: "Switzerland – Brienz" },
+      { src: "image/ch/17.jpg", caption: "Switzerland – Brienz" },
+      { src: "image/ch/19.jpg", caption: "Switzerland – Stockhorn" },
+      { src: "image/ch/21.jpg", caption: "Switzerland – Stockhorn" },
+      { src: "image/ch/22.jpg", caption: "Switzerland – Thun lake" },
+      { src: "image/ch/23.jpg", caption: "Switzerland – On the way..." },
       
-      { src: "26.jpg", caption: "Switzerland – Pilatus bahn" },
-      { src: "27.jpg", caption: "Switzerland – Brienz" },
-      { src: "28.jpg", caption: "Switzerland – Just beautiful" },
-      { src: "29.jpg", caption: "Switzerland – Stockhorn" },
-      { src: "30.jpg", caption: "Switzerland – Pilatus" },
-       { src: "31.jpg", caption: "Switzerland – Audi :P" },
-      { src: "32.jpg", caption: "Switzerland – Audi :P" },
-      { src: "33.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
-      { src: "34.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
-      { src: "35.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
-      { src: "36.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
-      { src: "37.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
-      { src: "38.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
-      { src: "39.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
-      { src: "40.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
-      { src: "41.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
-      { src: "50.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
-      { src: "52.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
-      { src: "43.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
-      { src: "44.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
-      { src: "45.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
-      { src: "46.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
-      { src: "47.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
-      { src: "48.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
-      { src: "49.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
+      { src: "image/ch/26.jpg", caption: "Switzerland – Pilatus bahn" },
+      { src: "image/ch/27.jpg", caption: "Switzerland – Brienz" },
+      { src: "image/ch/28.jpg", caption: "Switzerland – Just beautiful" },
+      { src: "image/ch/29.jpg", caption: "Switzerland – Stockhorn" },
+      { src: "image/ch/30.jpg", caption: "Switzerland – Pilatus" },
+     { src: "image/ch/31.jpg", caption: "Switzerland – Audi :P" },
+      { src: "image/ch/32.jpg", caption: "Switzerland – Audi :P" },
+      { src: "image/ch/33.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
+      { src: "image/ch/34.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
+      { src: "image/ch/35.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
+      { src: "image/ch/36.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
+      { src: "image/ch/37.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
+      { src: "image/ch/38.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
+      { src: "image/ch/39.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
+      { src: "image/ch/40.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
+      { src: "image/ch/41.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
+      { src: "image/ch/50.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
+      { src: "image/ch/52.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
+      { src: "image/ch/43.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
+      { src: "image/ch/44.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
+      { src: "image/ch/45.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
+      { src: "image/ch/46.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
+      { src: "image/ch/47.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
+      { src: "image/ch/48.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
+      { src: "image/ch/49.jpg", caption: "Switzerland – Lauterbrunnen waterfall at night" },
   ],  
   1: [
     { src: "26.jpg", caption: "" },
     { src: "", caption: "" }
   ],
   2: [
-    { src: "", caption: "" },
-    { src: "", caption: "" }
+    { src: "image/uk/1.jpg", caption: "Blakeney tide" },
+     { src: "image/uk/2.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/3.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/4.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/5.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/6.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/7.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/8.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/9.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/10.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/11.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/12.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/13.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/14.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/15.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/16.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/17.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/18.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/19.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/20.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/21.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/22.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/23.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/24.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/25.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/26.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/27.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/28.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/29.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/30.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/11.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/32.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/33.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/34.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/35.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/36.jpg", caption: "Blakeney tide" },
+       { src: "image/uk/38.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/39.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/40.jpg", caption: "Blakeney tide" },
+
+      { src: "image/uk/43.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/44.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/45.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/46.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/47.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/48.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/49.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/50.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/51.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/52.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/53.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/54.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/55.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/56.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/57.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/58.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/59.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/60.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/61.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/62.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/63.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/64.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/65.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/66.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/67.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/68.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/69.jpg", caption: "Blakeney tide" },
+      { src: "image/uk/70.jpg", caption: "Blakeney tide" },
+  
+      
+      
+      
+      
   ],
   3: [
     { src: "", caption: "Budapest Parliament" },
