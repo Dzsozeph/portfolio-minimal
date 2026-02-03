@@ -1143,6 +1143,7 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 	
  
 }
+
 .slider .list .item .content-galery p:nth-child(1){
     text-transform: uppercase;
     letter-spacing: 10px;
@@ -1158,6 +1159,7 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
     font-size: 20px;
     margin: 0;
 	color: white;
+    
 }
 .slider .list .item.active{
     opacity: 1;
