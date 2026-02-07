@@ -1,7 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 /*---------------------------------------------------------------------------------FONTS-----------------------------------------------------------------------*/
-
+#thumbnails-list img {
+  display: block;
+  object-fit: cover;
+  transform: translateZ(0);
+}
 .red-hat-text-font {
   font-family: "Red Hat Text", sans-serif;
   font-optical-sizing: auto;

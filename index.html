@@ -143,7 +143,7 @@
   </div>
 	</a>
 			
-	<a href="https://dzsozeph.github.io/cmgoldtactics" target="_blank">
+	<a href="https://dzsozeph.github.io/warlords-of-draenor" target="_blank">
   <div class="mini-site">
     <img src="wod.png" alt="Site 7">
   </div>
@@ -553,6 +553,8 @@
 </div>
 </section>
 <script>
+    
+    /*-------------------------------------------------------------PRELOADER-------------------------------------------*/
 	let currentSlide = 0;
   window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
@@ -562,7 +564,7 @@
       preloader.remove();
     }, 2000); 
   });  
-	
+	/*-------------------------------------------------------------MOUSE CIRCLE---------------------------------------------*/
 const circle = document.getElementById('cursor-circle');
 let mouseX = 0, mouseY = 0;
 let currentX = 0, currentY = 0;
@@ -582,7 +584,7 @@ function animate() {
 }
 
 animate();
-	
+	/*-----------------------------------------------------PHOTOSITE-----------------------------------------------------*/
 function openPhotographer() {
   const main = document.getElementById("main-content");
   const photo = document.getElementById("photographer-page");
@@ -607,7 +609,7 @@ function closePhotographer() {
   }, 500); 
 }
 
-	
+	/*------------------------------------------------------------------------------------------------------------------*/
 	
 	
 	/*
@@ -648,7 +650,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	*/
 	
 	
-	// Példa képadatbázis
+	// PHOTO DATABASE
 const galleryData = {
   0: [
       { src: "image/ch/12.jpg", caption: "Switzerland – Stockhorn, Berge Seen" },
@@ -877,25 +879,30 @@ let autoSlideInterval;
 // --- Thumbnailok létrehozása ---
 function populateThumbnails() {
   thumbnailsList.innerHTML = "";
+
   currentGallery.forEach((item, idx) => {
     const li = document.createElement("li");
     const thumb = document.createElement("img");
-    
-    // ha nincs src, használjunk placeholdert
-    thumb.src = item.src || 'https://via.placeholder.com/80x60?text=No+Image';
+
+    thumb.dataset.src = item.src; // ⬅️ nem azonnal tölt
     thumb.alt = item.caption || 'No caption';
+    thumb.loading = "lazy";
+    thumb.decoding = "async";
+    thumb.width = 80;
+    thumb.height = 60;
     thumb.style.cursor = "pointer";
-    
+
     thumb.addEventListener("click", () => {
       currentIndex = idx;
       updateGallery();
     });
-    
+
     li.appendChild(thumb);
     thumbnailsList.appendChild(li);
   });
-}
 
+  observeThumbs();
+}
 // --- Kép frissítése animációval ---
 function updateGallery(direction = 1) {
   galleryImage.classList.remove("slide-in-left", "slide-in-right");
@@ -916,7 +923,79 @@ function updateGallery(direction = 1) {
     img.style.border = idx === currentIndex ? "3px solid #20c7a0" : "none";
   });
 }
+function updateGallery(direction = 1) {
+  galleryImage.classList.remove("slide-in-left", "slide-in-right");
+  void galleryImage.offsetWidth;
 
+  galleryImage.classList.add(
+    direction === 1 ? "slide-in-right" : "slide-in-left"
+  );
+
+  const item = currentGallery[currentIndex];
+
+  galleryImage.decoding = "async";
+  galleryImage.src = item.src;
+  galleryCaption.textContent = item.caption || "";
+
+  // thumbnail border
+  thumbnailsList.querySelectorAll("img").forEach((img, idx) => {
+    img.style.border = idx === currentIndex ? "3px solid #20c7a0" : "none";
+  });
+}
+const thumbObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+
+    const img = entry.target;
+    img.src = img.dataset.src;
+    thumbObserver.unobserve(img);
+  });
+}, {
+  root: thumbnailsList,
+  rootMargin: '100px'
+});
+
+function observeThumbs() {
+  const thumbs = thumbnailsList.querySelectorAll("img[data-src]");
+  thumbs.forEach(img => thumbObserver.observe(img));
+}
+function populateThumbnailsChunked() {
+  thumbnailsList.innerHTML = "";
+  let index = 0;
+  const CHUNK = 12;
+
+  function renderChunk() {
+    for (let i = 0; i < CHUNK && index < currentGallery.length; i++) {
+      const item = currentGallery[index];
+      const li = document.createElement("li");
+      const thumb = document.createElement("img");
+
+      thumb.dataset.src = item.src;
+      thumb.loading = "lazy";
+      thumb.decoding = "async";
+      thumb.width = 80;
+      thumb.height = 60;
+
+      thumb.addEventListener("click", () => {
+        currentIndex = index;
+        updateGallery();
+      });
+
+      li.appendChild(thumb);
+      thumbnailsList.appendChild(li);
+      index++;
+    }
+
+    if (index < currentGallery.length) {
+      requestAnimationFrame(renderChunk);
+    } else {
+      observeThumbs();
+    }
+  }
+
+  renderChunk();
+}
+    populateThumbnailsChunked();
 /*/ --- Automatikus váltás ---
 function startAutoSlide() {
   stopAutoSlide(); 
