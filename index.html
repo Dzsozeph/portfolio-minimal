@@ -22,7 +22,7 @@
 	<section id="main-content">
 		<div class="video-background">
   <video autoplay muted loop playsinline>
-    <source src="output.webm" type="video/mp4">
+    <source src="output.webm" type="video/webm">
    
   </video>
 		</div>
@@ -567,6 +567,12 @@
       preloader.remove();
     }, 2000); 
   });  
+    
+    const video = document.querySelector('.video-background video');
+video.addEventListener('loadeddata', () => {
+  preloader.classList.add("fade-out");
+  setTimeout(() => preloader.remove(), 500);
+});
 	/*-------------------------------------------------------------MOUSE CIRCLE---------------------------------------------*/
 const circle = document.getElementById('cursor-circle');
 let mouseX = 0, mouseY = 0;
