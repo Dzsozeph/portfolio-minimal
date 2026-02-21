@@ -1509,7 +1509,7 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
   right: 3vw;
   top: 2.5vh;
   z-index: 1;
-  width: 25vw;     /* ne legyen túl nagy */
+  width: 10vw;     /* ne legyen túl nagy */
   height: 90vh;    /* magasabb, hogy több thumb elférjen */
   overflow-y: auto; /* görgethető, ha több van */
   background: rgba(0,0,0,0.6); /* hogy kiemelkedjen a háttérből */
@@ -1519,7 +1519,7 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 
 .gallery-thumbnails ul {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
 }
 .gallery-thumbnails li {
   margin-bottom: 5px;
