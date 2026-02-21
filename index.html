@@ -879,6 +879,11 @@ let currentGallery = [];
 let currentIndex = 0;
 let autoSlideInterval;
 
+function getThumbnailPath(originalPath) {
+  return originalPath
+    .replace(/\\/g, '/')
+    .replace(/\/([^\/]+)\.(jpg|jpeg|png)$/i, '/thumbnails/$1.webp');
+}
 // --- Thumbnailok létrehozása ---
 function populateThumbnails() {
   thumbnailsList.innerHTML = "";
@@ -887,7 +892,7 @@ function populateThumbnails() {
     const li = document.createElement("li");
     const thumb = document.createElement("img");
 
-    thumb.dataset.src = item.src; // ⬅️ nem azonnal tölt
+    thumb.dataset.src = getThumbnailPath(item.src); // ⬅️ nem azonnal tölt
     thumb.alt = item.caption || 'No caption';
     thumb.loading = "lazy";
     thumb.decoding = "async";
@@ -973,7 +978,7 @@ function populateThumbnailsChunked() {
       const li = document.createElement("li");
       const thumb = document.createElement("img");
 
-      thumb.dataset.src = item.src;
+      thumb.dataset.src = getThumbnailPath(item.src);
       thumb.loading = "lazy";
       thumb.decoding = "async";
       thumb.width = 80;
