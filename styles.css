@@ -1743,6 +1743,10 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
         font-size: 50px;
 		
     }
+    
+    .content-galery{
+        margin-top: 10vh;
+    }
    
 }
 
@@ -2217,8 +2221,8 @@ li:hover .content3 {
   right: 0;
   z-index: 1;
   width: 100vw;     /* ne legyen túl nagy */
-  height: 10vh;    /* magasabb, hogy több thumb elférjen */
-  overflow-y: auto; /* görgethető, ha több van */
+  height: 20vh;    /* magasabb, hogy több thumb elférjen */
+  overflow: scroll; /* görgethető, ha több van */
   background: rgba(0,0,0,0.6); /* hogy kiemelkedjen a háttérből */
   border-radius: 10px;
      
@@ -2236,11 +2240,7 @@ li:hover .content3 {
 }
 }
 
-@media (max-width: 1000px) {
-    .content-galery{
-        margin-top: 10vh;
-    
-         }
-    
 
-     }
+     
+
+     
