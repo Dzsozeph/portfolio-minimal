@@ -918,20 +918,25 @@ function populateThumbnails() {
 // --- Kép frissítése animációval ---
 function updateGallery(direction = 1) {
   galleryImage.classList.remove("slide-in-left", "slide-in-right");
-  void galleryImage.offsetWidth; // animáció reset
+  void galleryImage.offsetWidth;
 
-  if (direction === 1) {
-    galleryImage.classList.add("slide-in-right");
-  } else {
-    galleryImage.classList.add("slide-in-left");
-  }
+  galleryImage.classList.add(
+    direction === 1 ? "slide-in-right" : "slide-in-left"
+  );
 
-  galleryImage.src = currentGallery[currentIndex].src;
-  galleryCaption.textContent = currentGallery[currentIndex].caption || "";
+  const item = currentGallery[currentIndex];
 
-  // thumbnail border update
-  const thumbnailImgs = thumbnailsList.querySelectorAll("li img");
-  thumbnailImgs.forEach((img, idx) => {
+  const img = new Image();
+  img.decoding = "async";
+  img.src = item.src;
+
+  img.onload = () => {
+    galleryImage.src = img.src;
+  };
+
+  galleryCaption.textContent = item.caption || "";
+
+  thumbnailsList.querySelectorAll("img").forEach((img, idx) => {
     img.style.border = idx === currentIndex ? "3px solid #20c7a0" : "none";
   });
 }
@@ -988,10 +993,12 @@ function populateThumbnailsChunked() {
       thumb.width = 80;
       thumb.height = 60;
 
-      thumb.addEventListener("click", () => {
-        currentIndex = index;
-        updateGallery();
-      });
+   const currentThumbIndex = index;
+
+thumb.addEventListener("click", () => {
+  currentIndex = currentThumbIndex;
+  updateGallery();
+});
 
       li.appendChild(thumb);
       thumbnailsList.appendChild(li);
@@ -1007,7 +1014,7 @@ function populateThumbnailsChunked() {
 
   renderChunk();
 }
-    populateThumbnailsChunked();
+
 /*/ --- Automatikus váltás ---
 function startAutoSlide() {
   stopAutoSlide(); 
@@ -1022,19 +1029,18 @@ function stopAutoSlide() {
 }
 
 // --- Megnyitás ---
-  journeyBtn.addEventListener('click', () => {
-    // Lekérjük az aktuális slide galéria indexét
-    const activeSlide = document.querySelector('.slider .list .item.active');
-    const galleryIndex = activeSlide ? parseInt(activeSlide.dataset.gallery) : 0;
+journeyBtn.addEventListener('click', () => {
+  const activeSlide = document.querySelector('.slider .list .item.active');
+  const galleryIndex = activeSlide ? parseInt(activeSlide.dataset.gallery) : 0;
 
-    currentGallery = galleryData[galleryIndex] || [];
-    if (currentGallery.length > 0) {
-        currentIndex = 0;
-        populateThumbnails();
-        updateGallery();
-        galleryModal.style.display = 'flex';
-        startAutoSlide();
-    }
+  currentGallery = galleryData[galleryIndex] || [];
+
+  if (currentGallery.length > 0) {
+    currentIndex = 0;
+    populateThumbnailsChunked(); // <-- EZ A FONTOS
+    updateGallery();
+    galleryModal.style.display = 'flex';
+  }
 });
 
 // --- Bezárás ---
