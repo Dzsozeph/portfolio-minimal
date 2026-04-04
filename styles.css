@@ -661,8 +661,8 @@ pointer-events: none;
 	position: absolute;
     top: -12vh;
     left: -3vw;
-	width: 130px;
-	height: 110px;
+	width: 100px;
+	height: 100px;
 	background-image: url("logonew2.png");
 	background-size: cover;
 	background-position: center;
@@ -873,10 +873,10 @@ top: 150px !important;
 
 .photographer{
 	position: absolute;
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	margin: 0 auto;
-	left: 3vw;
+	left: 1vw;
 	bottom: 4vh;
 	background-color: transparent;
 	color: white;
@@ -896,8 +896,8 @@ top: 150px !important;
 }
 .tooltip {
   position: absolute;
-  bottom: -70%; /* a gomb fölé kerül */
-  left: 50%;
+  bottom: -80%; /* a gomb fölé kerül */
+  margin-left: 2vw;
   transform: translateX(-50%);
   color: aquamarine;
   padding: 6px 10px;
@@ -939,6 +939,18 @@ top: 150px !important;
 .social-icon img:hover {
     transform: scale(1.1); /* Ikonok nagyítása hover esetén */
 }
+
+.socialmedia-bar-2{
+	position: absolute;
+	top: 8vh;
+	right: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 10px;
+	z-index: 1;
+	}
+
 
 .content2{
 	position: relative;
@@ -1002,11 +1014,29 @@ background: linear-gradient(286deg, rgba(24, 5, 51, 1) 56%, rgba(0, 0, 0, 1) 100
 	  font-family: "Red Hat Text", sans-serif;
 }
 
+.top-bar{  
+  position: absolute;
+  width: 100vw;
+  height: 16vh;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(1px); /* homályosítja a mögöttes tartalmat */
+  -webkit-backdrop-filter: blur(1px); /* Safari kompatibilitás */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* vékony „üveg szegély” */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* finom árnyék */
+  padding: 20px 40px;
+  display: flex;           /* flex layout */
+  align-items: center;     /* vertikálisan középre */
+  justify-content: space-between; /* ha vannak jobb és bal oldali menük */
+    z-index: 1;
+    
+}
+
 .logo-photo {
   position: fixed;
-  top: -5vh;
+ 
+  top: -3vh;
   left: 1vw;
-  width:  200px;
+  width:  170px;
   height: auto;
   aspect-ratio: 1 / 1;
   background-image: url("photologo3.png");
@@ -1014,9 +1044,18 @@ background: linear-gradient(286deg, rgba(24, 5, 51, 1) 56%, rgba(0, 0, 0, 1) 100
   background-position: center;
   z-index: 99999;
   opacity: 1;
+  border-radius: 50%;
+
+  
 }
 
-
+.logo-background {
+  background: linear-gradient(45deg, rgba(255,0,150,0.6), rgba(0,204,255,0.6));
+  padding: 10px;
+  border-radius: 6px;
+  backdrop-filter: blur(5px); /* kicsit elhomályosítja a mögöttes tartalmat */
+  z-index: -1;
+}
 .back-button {
   z-index: 999;
   width: 2rem;
@@ -1029,7 +1068,7 @@ background: linear-gradient(286deg, rgba(24, 5, 51, 1) 56%, rgba(0, 0, 0, 1) 100
   transition: background 0.3s;
   position: fixed;
   bottom: 4vh;
-  margin-left: 6vh;
+  margin-left: 2vh;
   box-shadow: 0 0 30px aquamarine;
   border-radius: 50%;
 
@@ -1044,7 +1083,7 @@ background: linear-gradient(286deg, rgba(24, 5, 51, 1) 56%, rgba(0, 0, 0, 1) 100
 
 .tooltip-back {
   position: absolute;
-  left: 50%;
+  left: 2vw;
   transform: translateX(-50%);
   color: aquamarine;
   padding: 6px 10px;
@@ -1447,6 +1486,8 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 68%, rgba(66, 61, 61, 1) 94%);
   justify-content: center;
   align-items: center;
+    
+    
 }
 
 .gallery-content {
@@ -1708,8 +1749,8 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 
 
 	.photographer{
-		width: 40px !important;
-		height: 40px !important;
+		width: 30px !important;
+		height: 30px !important;
 	}
 
 			
@@ -1965,29 +2006,33 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 .menu {
   display: none;
   position: fixed;
-  top: 40%;
+  top: 8vh;
   right: 0;
-  width: 30%;
-  min-height: 10%;
-  background-color: rgba(0, 0, 0, 1);
+  width: 100vw;
+  min-height: 80vh;
+  background: #7039a3;
+  background: linear-gradient(0deg, rgba(112, 57, 163, 0.69) 0%, rgba(0, 0, 0, 1) 80%);
   color: white;
   z-index: 12;
   flex-direction: column;  /* Vertikális elrendezés */
   box-shadow: 0 0 50px #6834A8;
-  border-radius: 20px;
+  border-radius: 0 0 20px;
   white-space: nowrap;
   animation: slideInRight ease 1s;
   padding: 20px;
+  z-index: 1;
 
 }
 
 
 .menu li {
   padding: 15px;
-  font-size: 15px;
+  font-size: 1.2rem;
   cursor: pointer;
   color: white;
   right: 0;
+  box-shadow: 0 2px #7039A3;
+    
 	
 }
 .menu li:hover {
@@ -2013,6 +2058,10 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
   .hamburger {
     display: flex;
   }
+    
+    .background{
+        background-size: 95% !important;
+    }
 	
 	li:hover .content{
 		width: 98vw !important;
