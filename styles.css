@@ -258,6 +258,7 @@ body{
 		z-index: -1;
 	}
 
+
 .section {
   height: 100vh;
   display: flex;
@@ -937,7 +938,7 @@ top: 150px !important;
 	bottom: 4vh;
 	background-color: transparent;
 	color: white;
-	background-image: url("photo.png");
+	background-image: url("camera.png");
 	background-size: contain;
 	background-position: center;
 	border-radius: 50%;
@@ -949,14 +950,15 @@ top: 150px !important;
 
 
 .photographer:hover {
-	box-shadow: 0 0 20px aquamarine;
+	box-shadow: 0 0 20px #8C1AF6;
 }
 .tooltip {
   position: absolute;
   bottom: -80%; /* a gomb fölé kerül */
   margin-left: 2vw;
   transform: translateX(-50%);
-  color: aquamarine;
+  color: #8C1AF6;
+  text-shadow: 0 1px 0 white;
   padding: 6px 10px;
   font-size: 0.7rem;
   font-family: "Michroma", sans-serif;
@@ -965,6 +967,9 @@ top: 150px !important;
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+
+
 
 /* Megjelenés hoverre */
 .photographer:hover .tooltip {
@@ -1702,9 +1707,7 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
    
   }
 				
-				.video-background{
-					opacity: 0.060;
-				}			
+			
 				
 				.logo2{
 					display: none;
@@ -2650,6 +2653,7 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 80%);
     background-image: url("banner.png");
     background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     z-index: 1;
     
 }
@@ -2685,37 +2689,65 @@ iframe {
 }
 
 .grid-container-story {
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 100%);
+ -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 100%);
   position: absolute;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  width: 50vw;
-    margin-left: 20vw;
+  width: 80vw;
+  left: 0;
   opacity: 1;
   transition: all 1s ease;
   z-index: 1;
-  margin-top: 5vh;
-  pointer-events: none;
   box-shadow: 0 3px 3px 0 #32B896;
-  pointer-events: none;
-  box-shadow: 0 3px 3px 0 #32B896;
+  box-shadow: 0 3px 3px 0 #32B896; 
+  margin-top: -5vh;
 
 
 }
+
+.mini-site-2{
+  border: 1px solid #3C8C68;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  width: 100%; /* kitölti a grid cellát */
+  
+}
+	
+
+.mini-site-2:hover {
+  transform: scale(1.1);
+  border-color: mediumpurple;
+
+}
+
+
+.mini-site-2 img {
+  width:100%;
+  height: 100%;
+  display: block;
+  background-size: cover;
+  background-position: center;
+	 
+}
+
+
 .button-contact-2{
 		position: absolute;
 		width: 10rem;
 		height: 3rem;
-		border: dashed 1px #256759;
+		border: dashed 1px #0ff;
 		color:white;
 		text-align: center;
 		align-content: center;
 		cursor: grab;
-		left: 0;
+		margin-left: 35vw;
 		animation: fall 2s ease-in forwards;
 		z-index: -1;
-		margin-top: 30vh;
+		margin-top: 40vh;
 	
 	}
 	
@@ -2724,3 +2756,58 @@ iframe {
 		border: solid 1px #D751FB;
 		color: aquamarine;
 }
+
+
+.hint-box {
+  position: absolute;
+  margin-left: -3.5rem;
+  top: 55vh;
+  background: rgba(0,0,0,0.8);
+  border: 1px dashed #0ff;
+  padding: 10px;
+  color: #0ff;
+  font-size: 12px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 1px #0ff;
+  animation: fadeIn 0.5s ease;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* MEGJELENÉS */
+.hint-box.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* NYÍL */
+.arrow {
+  position: absolute;
+  left: -55px;
+  bottom: 15px;
+
+  width: 0;
+  height: 0;
+
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 50px solid #0ff;
+ transform: rotate(-20deg); /* 👈 EZ dönti meg */
+  filter: drop-shadow(0 0 5px #0ff);
+}
+
+/* KIS ANIMÁCIÓ (cyber pulse) */
+.hint-box.active {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px #0ff; }
+  50% { box-shadow: 0 0 25px #0ff; }
+  100% { box-shadow: 0 0 10px #0ff; }
+}
+
