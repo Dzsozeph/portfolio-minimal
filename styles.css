@@ -1735,6 +1735,16 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 	    display: none;
 		
 	}
+    
+    .description{
+        margin-top: 10vh !important;
+    }
+    
+    .cyber-nav{
+        display:none;
+    }
+    
+    
 	.nav-border{
 		top: 2px !important;
 		height: 6px !important;
@@ -2160,12 +2170,6 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 	
 	}
 	
-	.description{
-		margin-top: -1vh!important;
-		
-	}
-	
-	
 }
 
 @keyframes bounce {
@@ -2315,7 +2319,7 @@ li:hover .content3 {
   grid-template-columns: repeat(1, 1fr);
   position: absolute;
   right: 0;
-        overflow: auto;
+  overflow: auto;
 
 }
 .gallery-thumbnails {
@@ -2357,8 +2361,7 @@ li:hover .content3 {
         height: 50px;
         position: absolute;
         grid-template-columns: repeat(3, 2fr);
-        gap: 20px;
-        
+        gap: 20px;  
     }
     
     .gallery-thumbnails {
