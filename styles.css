@@ -3208,6 +3208,11 @@ iframe {
   animation: pulse 2s infinite;
 }
 
+.title3{
+    
+    
+   margin-top: -15vh; left: 15vw;position: absolute; width: 50vw; margin: 0 auto; text-align: center;
+}
 
 @media (max-width: 1200px){
     .story-text{
@@ -3271,8 +3276,29 @@ iframe {
       
            
     }
-   
+   .grid-container-story {
+  grid-template-columns: repeat(2, 1fr);
+  max-height: 80vh;          /* vagy amennyi kell */
+  overflow-y: scroll;          /* függőleges görgetés */
+  -webkit-overflow-scrolling: touch; /* iOS smooth scroll */
+  margin-top: 5vh;
+
+}
+    
+    .mini-site-2{
+  border: 1px solid #3C8C68;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  width: 100%; /* kitölti a grid cellát */
+ 
+}
+    .title3{
+        position: fixed;
+        margin-top: -4vh;
     }
 
-
+}
 
