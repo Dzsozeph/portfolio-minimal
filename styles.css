@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 /*---------------------------------------------------------------------------------FONTS-----------------------------------------------------------------------*/
-#thumbnails-list img {
+#thumbnails-listbutton-contact-2img {
   display: block;
   object-fit: cover;
   transform: translateZ(0);
@@ -1892,9 +1892,9 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 		left:50% !important;
 		transform: translateX(-50%);
 		min-height:700px;
-		background: #250f3d;
-background: linear-gradient(139deg, rgba(37, 15, 61, 1) 12%, rgba(0, 0, 0, 1) 80%);
-		margin-top: -34vh !important;
+		background: #22C1C3;
+background: #22C1C3;
+background: linear-gradient(148deg, rgba(34, 193, 195, 1) 0%, rgba(0, 0, 0, 1) 10%);
         
 	
 	}
@@ -3140,7 +3140,7 @@ iframe {
 		margin-left: 35vw;
 		animation: fall 2s ease-in forwards;
 		z-index: -1;
-		margin-top: 40vh;
+		margin-top: 60vh;
 	
 	}
 	
@@ -3324,5 +3324,5 @@ iframe {
         font-size: 1.2rem !important;
     }
     
-
 }
+
