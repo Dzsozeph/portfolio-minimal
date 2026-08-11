@@ -2926,7 +2926,7 @@ iframe {
 
 /* STORY */
 .story-section {
-  margin-top: 100vh;
+  margin-top: 0;
   height: 400vh;
   border-left: 1px dashed #2E1680;
   z-index: -1;
