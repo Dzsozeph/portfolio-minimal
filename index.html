@@ -1427,21 +1427,26 @@ function setActive(index) {
   current = index;
 }
 
-ScrollTrigger.create({
-  trigger: ".story-section",
-  start: "top top",
-  end: "bottom bottom",
-  scrub: true,
-  onUpdate: (self) => {
-    const progress = self.progress;
+const storyTrigger = ScrollTrigger.create({
+    trigger: ".story-section",
+    start: "top top",
+    end: "bottom top",
+    scrub: 0.5,
 
-    let stepIndex = Math.floor(progress * steps.length);
+    invalidateOnRefresh: true,
 
-    if (stepIndex !== current && stepIndex < steps.length) {
-      current = stepIndex;
-      setActive(stepIndex);
+    onUpdate: (self) => {
+        const progress = self.progress;
+
+        let stepIndex = Math.min(
+            steps.length - 1,
+            Math.floor(progress * steps.length)
+        );
+
+        if (stepIndex !== current) {
+            setActive(stepIndex);
+        }
     }
-  }
 });
 
     const dots = document.querySelectorAll('.nav-dot');
@@ -1470,6 +1475,12 @@ dots.forEach(dot => {
 
 window.addEventListener('scroll', activateDot);
 window.addEventListener('load', activateDot);
+
+	window.addEventListener("orientationchange", () => {
+    setTimeout(() => {
+        ScrollTrigger.refresh();
+    }, 300);
+});
 </script>
 
 </body>
