@@ -261,6 +261,16 @@ body{
 		z-index: -1;
 	}
 
+#section-main {
+    position: relative;
+    height: 200vh;
+}
+
+#section-main .main-content {
+    position: sticky;
+    top: 0;
+    height: 100dvh;
+}
 
 .section {
   height: 100vh;
