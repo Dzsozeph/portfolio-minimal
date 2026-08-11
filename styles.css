@@ -2568,7 +2568,7 @@ li:hover .content3 {
 .story-section {
   position: relative;
   width: 100%;
-  margin-top: 100dvh;
+  margin-top: 0;
   height: 400dvh;
   border-left: 1px dashed #2E1680;
   z-index: -1;
