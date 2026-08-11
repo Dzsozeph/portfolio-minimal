@@ -125,7 +125,7 @@ body{
   }
 }
 
-/*---------------------------------------------------------------------------------PRELOADER----------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------BODY----------------------------------------------------------------------*/
 .banner{
 	width: 100vw;
 	height: 19vh;
@@ -193,7 +193,6 @@ body{
     box-shadow: 0 0 120px #0CB6A5;
 }
 
-	
 
 	.title{
   position: absolute;
@@ -238,10 +237,7 @@ body{
 		margin-top: 15vh;
 		right: 30vw;
 		text-align: center;
-
 		animation: slideInLeft ease 2s;
-		
-		
 	}
 
 
@@ -1737,9 +1733,7 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 		
 	}
     
-    .description{
-        margin-top: 10vh !important;
-    }
+  
     
     .cyber-nav{
         display:none;
