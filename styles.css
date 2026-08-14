@@ -1725,20 +1725,20 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 	
 			@media (max-width: 800px) {
   .background {
-	  margin-top: 10vh;
+	margin-top: 10vh;
     background-size: 70% !important; 
 	background-position: center left -40% !important;
    
   }
 				
-			
+	
+  .description{
+     font-size: 200px;
+  }
+
 				
-				.logo2{
-					display: none;
-				}	
-				
-		.logo2{
-		display: none !important;
+  .logo2{
+  display: none !important;
 			
 				}
 }
@@ -1996,7 +1996,7 @@ background: linear-gradient(148deg, rgba(34, 193, 195, 1) 0%, rgba(0, 0, 0, 1) 1
 	.description{
 		margin-top: -0.5vh !important;
 		margin-left: 25vw;
-		font-size: 0.6rem;
+		font-size: 0.7rem;
 	}
 }
 
