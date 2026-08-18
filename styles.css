@@ -234,8 +234,9 @@ body{
   }
 }
 
-/*.description{
+.description{
 		position: absolute;
+        right: 23%;
 		padding: 10px;
 		font-size: 0.9rem;
 		font-weight: 300;
@@ -246,7 +247,7 @@ body{
 		animation: slideInLeft ease 2s;
 	    
 	}
-*/
+
 
 	.background{
         
@@ -942,11 +943,7 @@ pointer-events: none;
 
 
 
-.description{
-position: absolute;
-right: 23%;
 
-}
 
 .photographer{
 	position: fixed;
