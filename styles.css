@@ -244,6 +244,7 @@ body{
 		right: 30vw;
 		text-align: center;
 		animation: slideInLeft ease 2s;
+	    background: red;
 	}
 
 
