@@ -40,9 +40,14 @@
 	padding: 0;
 	margin: 0;
 	user-select: none;
-    scroll-behavior: smooth;
+   
    
 	}
+
+html {
+    scroll-behavior: auto;
+}
+
 /*---------------------------------------------------------------------------------STANDARD-----------------------------------------------------------------------*/	
 body{
 	position: relative;
@@ -51,8 +56,9 @@ body{
 	background-color: black;
 	transition: all 0.3s ease;
     overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-y: auto;
 
-		
 	}
 /*---------------------------------------------------------------------------------PRELOADER----------------------------------------------------------------------*/
 
@@ -125,7 +131,7 @@ body{
   }
 }
 
-/*---------------------------------------------------------------------------------PRELOADER----------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------BODY----------------------------------------------------------------------*/
 .banner{
 	width: 100vw;
 	height: 19vh;
@@ -137,12 +143,12 @@ body{
 }
 
 .video-background {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh; /* teljes képernyő */
   overflow: hidden;
-  opacity: 0.010;
-  z-index: 10;
+  opacity: 0.030;
+  z-index: 1;
   pointer-events: none;
 }
 
@@ -193,7 +199,6 @@ body{
     box-shadow: 0 0 120px #0CB6A5;
 }
 
-	
 
 	.title{
   position: absolute;
@@ -234,14 +239,12 @@ body{
 		padding: 10px;
 		font-size: 0.9rem;
 		font-weight: 300;
-		color:white;
-		margin-top: 15vh;
-		right: 30vw;
+		color: white;
+		margin-top: 0.5vh;
+		right: 20vw;
 		text-align: center;
-
 		animation: slideInLeft ease 2s;
-		
-		
+	  top: 30vh;
 	}
 
 
@@ -259,6 +262,22 @@ body{
 		z-index: -1;
 	}
 
+#section-main {
+    position: relative;
+    height: 105vh;
+}
+
+#section-main .main-content {
+    position: sticky;
+    top: 0;
+    height: 120dvh;
+    transition: transform 0.12s linear, opacity 0.12s linear, filter 0.12s linear;
+    will-change: transform, opacity, filter;
+}
+
+#section-main.is-transitioning .main-content {
+    pointer-events: none;
+}
 
 .section {
   height: 100vh;
@@ -283,11 +302,19 @@ body{
   position: relative; /* kell a pszeudóelemnek */
   width: 20px;
   height: 20px;
+  flex: 0 0 20px;
+  padding: 0;
+  border: 0;
   border-radius: 50%;
   background: linear-gradient(135deg, #0ff, #f0f);
   box-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-dot:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 6px;
 }
 
 /* pszeudóelem az aktív állapothoz */
@@ -299,8 +326,6 @@ body{
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 2px solid #ff0; /* aktív szín */
-  box-shadow: 0 0 10px #ff0, 0 0 20px #ff0, 0 0 30px #ff0;
   animation: pulse 1.5s infinite;
   pointer-events: none; /* hogy ne zavarja a kattintást */
 }
@@ -331,7 +356,7 @@ body{
 		padding: 50px;
 		position: relative;
 		top: 40vh;
-		left: 37vw;
+		left: 35vw;
 		width: 16vw;
 		z-index: 1;
 		/*border-top: solid 1px white;*/
@@ -421,7 +446,7 @@ position: relative;
 		cursor: grab;
 		left: 40vw;
 		animation: fall 2s ease-in forwards;
-		z-index: 2;
+		z-index: -1;
 		margin-top: 10vh;
 	
 	}
@@ -603,6 +628,7 @@ pointer-events: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+
   padding-bottom: 50px;
   opacity:0;
   transition: all 1s ease;
@@ -836,7 +862,7 @@ pointer-events: none;
     270deg,
     #000000 0%,
     #038262 20%,
-	#0D362B 30%,
+	  #0D362B 30%,
     #111111 40%,
     #000000 60%,
     #D751FB 80%,
@@ -852,6 +878,7 @@ pointer-events: none;
 @keyframes moveGradient {
   0% { background-position: 0% 25%; }
   25% {background-position: 25% 50%; }
+
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
@@ -929,11 +956,7 @@ pointer-events: none;
 
 
 
-.description{
-position: absolute;
-right: 23%;
-top: 150px !important;
-}
+
 
 .photographer{
 	position: fixed;
@@ -1068,7 +1091,7 @@ top: 150px !important;
   flex-shrink: 0;
 }
 
-/*----------------------------------------------------PHOTO SECTION-----------------------------------*/
+/*----------------------------------------------------PHOTO SECTION-----------------------------------------------------------------------------------------*/
 
 #photographer-page {
   display: none;
@@ -1713,20 +1736,15 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 	
 			@media (max-width: 800px) {
   .background {
-	  margin-top: 10vh;
+	margin-top: 10vh;
     background-size: 70% !important; 
 	background-position: center left -40% !important;
    
   }
+
 				
-			
-				
-				.logo2{
-					display: none;
-				}	
-				
-		.logo2{
-		display: none !important;
+  .logo2{
+  display: none !important;
 			
 				}
 }
@@ -1737,12 +1755,18 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 		
 	}
     
-    .description{
-        margin-top: 10vh !important;
-    }
+  
     
     .cyber-nav{
-        display:none;
+        display: flex;
+        right: 12px;
+        gap: 14px;
+    }
+
+    .nav-dot {
+        width: 16px;
+        height: 16px;
+        flex-basis: 16px;
     }
     
     
@@ -1764,7 +1788,7 @@ background: linear-gradient(286deg, rgba(130, 130, 130, 1) 0%, rgba(58, 58, 58, 
 	.description{
 		margin-top: -0.5vh !important;
 		margin-left: 25vw;
-		font-size: 0.7rem;
+		font-size: 0.5rem;
 	}
 	
 	.button{
@@ -1979,9 +2003,15 @@ background: linear-gradient(148deg, rgba(34, 193, 195, 1) 0%, rgba(0, 0, 0, 1) 1
 	.slider .list .item .content-galery p:nth-child(1){
     text-transform: uppercase;
     letter-spacing: 10px;
-		font-size: 10px;
+	font-size: 10px;
 	
 }
+
+	.description{
+	
+		margin-left: 25vw;
+		font-size: 0.7rem;
+	}
 }
 
 @media (max-width: 600px){
@@ -2249,13 +2279,17 @@ display: inline-flex; /* szép igazítás miatt */
 
 .certificates-desktop {
     position: relative;
-    margin-top: -52vh;              /* li alá nyíljon */
+    margin-top: -55vh;              /* li alá nyíljon */
     left: -33vw;
-    width: 90vw;            /* ⬅️ ITT tudod méretezni */
-    height: 40vh;           /* ⬅️ ITT is */
+    width: 80vw;            /* ⬅️ ITT tudod méretezni */
+    height: 85vh;           /* ⬅️ ITT is */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
+    z-index: 2;
+    background: #000000;
+    background: linear-gradient(320deg, rgba(0, 0, 0, 0.37) 21%, rgba(24, 54, 54, 1) 100%);
+    overflow: hidden;
 }
 
 .grid-container-4 {
@@ -2263,11 +2297,12 @@ display: inline-flex; /* szép igazítás miatt */
     grid-template-columns: 1fr 1fr 1fr; /* 3 oszlop a harmadik nagy képnek */
     grid-auto-rows: auto;
     gap: 10px;
-    width: 90vw;
-    height: 90vh;
+    width: 100%;
+    height: 100%;
     overflow-y: scroll;
     background-color: rgba(0,0,0,0.8);
-    z-index: 99;
+    z-index: 1;
+    
 }
 
 /* Alap kártyák (1-4 kép) */
@@ -2422,86 +2457,6 @@ li:hover .content3 {
   opacity: 0.3;
 }
 
-.a {
-  pointer-events: none;
-  position: absolute;
-  --w: 2px;
-  --t: -40px;
-  --s: calc(var(--t) * -1);
-  --e: calc(100% + var(--t));
-  --g: #fff0, #fff3 var(--s), #fffa var(--s), #fff, #fffa var(--e),
-    #fff3 var(--e), #fff0;
-}
-
-.a::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: inherit;
-  filter: blur(4px) url(#unopaq);
-  z-index: -2;
-}
-
-.a::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: inherit;
-  filter: blur(10px) url(#unopaq);
-  opacity: 0;
-  z-index: -2;
-  transition: 0.3s;
-}
-
-.button-story :hover .a::after {
-  opacity: 1;
-}
-
-.l {
-  left: -2px;
-}
-
-.r {
-  right: -2px;
-}
-
-.l,
-.r {
-  background: linear-gradient(var(--g));
-  top: var(--t);
-  bottom: var(--t);
-  width: var(--w);
-}
-
-.t {
-  top: -2px;
-}
-
-.b {
-  bottom: -2px;
-}
-
-.t,
-.b {
-  background: linear-gradient(90deg, var(--g));
-  left: var(--t);
-  right: var(--t);
-  height: var(--w);
-}
-
-.backdrop {
-  position: relative;
-  inset: -9900%;
-  background: radial-gradient(
-    circle at 50% 50%,
-    #0000 0,
-    #22C1C3 20%,
-    #111111aa 50%
-  );
-  background-size: 3px 3px;
-  z-index: 1;
-}
-
 .cyber-btn {
   font-size: 18px;
   color: #fff;
@@ -2564,10 +2519,12 @@ li:hover .content3 {
   opacity: 0.6;
 }
 
+
 /* STORY */
 .story-section {
-  margin-top: 100vh;
-  height: 400vh;
+  position: relative;
+  width: 100%;
+  height: 300dvh;
   border-left: 1px dashed #2E1680;
   z-index: -1;
  
@@ -2576,31 +2533,34 @@ li:hover .content3 {
 .story-container {
   position: sticky;
   top: 0;
-  height: 100vh;
+  width: 100%;
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 10%;
   background: #000000;
-background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 80%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 80%);
 }
 
 /* TEXT */
 .story-text {
   width: 45%;
   position: relative;
-  margin-top: -40vh;
+  margin-top: -25vh;
 }
 
 .story-step {
   position: absolute;
   opacity: 0;
+  pointer-events: none;
   transform: translateY(50px);
   transition: 0.6s;
 }
 
 .story-step.active {
   opacity: 1;
+  pointer-events: auto;
   transform: translateY(0);
 }
 
@@ -2622,6 +2582,7 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 80%);
   width: 50%;
   height: 70%;
   position: relative;
+  pointer-events: none;
 }
 
 .visual-layer {
@@ -2629,6 +2590,7 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 80%);
   width: 100%;
   height: 100%;
   border-radius: 20px;
+  pointer-events: none;
   opacity: 0;
   transform: scale(1.1);
   filter: blur(20px);
@@ -2647,8 +2609,27 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 80%);
     background-size: contain;
     background-position: left;   
     background-repeat: no-repeat;
-    
+    width: 50vw;
+    z-index: 10;
+      -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0, 0, 0, 0.1) 10%,
+        rgba(0, 0, 0, 0.4) 25%,
+        rgba(0, 0, 0, 0.8) 45%,
+        black 65%
+    );
+
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0, 0, 0, 0.1) 10%,
+        rgba(0, 0, 0, 0.4) 25%,
+        rgba(0, 0, 0, 0.8) 45%,
+        black 65%
+    );
 }
+    
 
 .visual-layer.dev-2{
     margin-top: 10vh;
@@ -2686,10 +2667,17 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 80%);
  background: url('meai6.png');
     background-size: cover;
     background-position: center;   
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 50%, black 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 50%, black 100%);
-    mask-image: linear-gradient(to right, transparent 0%, black 50%, black 100%);
+ -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, black 35%),
+    linear-gradient(to bottom, transparent 0%, black 35%);
 
+  -webkit-mask-composite: source-in;
+
+  mask-image:
+    linear-gradient(to right, transparent 0%, black 35%),
+    linear-gradient(to bottom, transparent 0%, black 35%);
+
+  mask-composite: intersect;
 
 }
 
@@ -2751,7 +2739,7 @@ iframe {
 }
 
 .grid-container-story {
- -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 100%);
+
   position: absolute;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2764,6 +2752,7 @@ iframe {
   box-shadow: 0 3px 3px 0 #32B896;
   box-shadow: 0 3px 3px 0 #32B896; 
   margin-top: -5vh;
+  pointer-events: auto;
 
 
 }
@@ -2776,6 +2765,8 @@ iframe {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
   width: 100%; /* kitölti a grid cellát */
+  pointer-events: auto;
+
   
 }
 	
@@ -2795,6 +2786,7 @@ iframe {
   background-position: center;
 	 
 }
+
 
 
 .button-contact-2{
@@ -2912,7 +2904,7 @@ iframe {
 
 /* STORY */
 .story-section {
-  margin-top: 100vh;
+  margin-top: 0;
   height: 400vh;
   border-left: 1px dashed #2E1680;
   z-index: -1;
@@ -2941,12 +2933,14 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 80%);
 .story-step {
   position: absolute;
   opacity: 0;
+  pointer-events: none;
   transform: translateY(50px);
   transition: 0.6s;
 }
 
 .story-step.active {
   opacity: 1;
+  pointer-events: auto;
   transform: translateY(0);
 }
 
@@ -3010,18 +3004,6 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 80%);
 
 
 /* PHOTO STYLE */
-.visual-layer.photo {
-  width: 50vw;
-  margin-top: 15vh;
-  background: url('futur2.png');
-    background-size: cover;
-    background-position: center;   
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 50%, black 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 50%, black 100%);
-    mask-image: linear-gradient(to right, transparent 0%, black 50%, black 100%);
-
-
-}
 
 
 /* END */
@@ -3112,7 +3094,7 @@ iframe {
 	
 
 .mini-site-2:hover {
-  transform: scale(1.1);
+  transform: scale(0.9);
   border-color: mediumpurple;
 
 }
@@ -3325,4 +3307,3 @@ iframe {
     }
     
 }
-

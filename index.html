@@ -20,12 +20,23 @@
 </head>
 
 <body>
-    <div id="main-content">
+  	<div id="cursor-circle"></div>
+  	<div class="video-background">
+  <video autoplay muted loop playsinline>
+    <source src="output.webm" type="video/webm">
+   
+  </video>
+		</div>
+   <div class="logo3"></div>
+   <section id="section-main">
+
     <div class="cyber-nav">
-  <div class="nav-dot" data-target="#section1"></div>
-  <div class="nav-dot" data-target="#section2"></div>
-  <div class="nav-dot" data-target="#section3"></div>
+  <button class="nav-dot active" type="button" data-step-index="0" aria-label="Go to story step 1" aria-current="step"></button>
+  <button class="nav-dot" type="button" data-step-index="1" aria-label="Go to story step 2"></button>
+  <button class="nav-dot" type="button" data-step-index="2" aria-label="Go to story step 3"></button>
+  <button class="nav-dot" type="button" data-step-index="3" aria-label="Go to story step 4"></button>
 </div>
+    <div class="main-content">
     <div class="background"></div>
     <svg style="position: absolute; width: 0; height: 0;">
   <filter width="3000%" x="-1000%" height="3000%" y="-1000%" id="unopaq">
@@ -38,18 +49,13 @@
   </filter>
 </svg>
 <!-----------------------------------------------------------------------BACKGROUND AND VIDEO-------------------------------------------------------------->    
-	<section id="section-main">
-		<div class="video-background">
-  <video autoplay muted loop playsinline>
-    <source src="output.webm" type="video/webm">
-   
-  </video>
-		</div>
+
+	
         
         
         <div class="logo-container">
   <!--<div class="logo-text luxurious-script-regular">J . J-->
-    <div class="logo3"></div>
+   
 
 </div>
 <!---------------------------------------------------------------------------SOCIAL BAR-------------------------------------------------------------->    
@@ -67,7 +73,7 @@
         </div>
 <!--------------------------------------------------------------------- --CURSOR/PRELOADER-------------------------------------------------------------->
 
-	<div id="cursor-circle"></div>
+
 	<div id="preloader">
 	<div class="loader-text red-hat-text-font">Loading...</div>
 		</div>
@@ -82,7 +88,7 @@
 			<span class="vonal"></span>
 		
 		<div class="content content-text michroma-regular" style="font-size: 14px;">My name is <strong style="color: rgba(140,67,172,1.00); font-size: 20px; font-weight: 800">Jozsef Jonas</strong> <br>
-			32 years old Hungarian <img src="hu.png" alt="html" width="20px"> living in the Netherlands. <img src="nl.png" alt="html" width="20px"><br>
+			I'm a 33-year-old Hungarian living in the Netherlands. <img src="hu.png" alt="Hungarian flag" width="20px"> <img src="nl.png" alt="Dutch flag" width="20px"><br>
 			<br>
 <div class="content2">
 	<div class="icon-style">
@@ -92,7 +98,7 @@
 	<div class="icon-style">
 <div class="icon icon2"></div>
 
-  <p><strong style="color: aquamarine; font-weight: 800">My aim to create pixel precise</strong> stunning things for web, combining frontend logic with a designer’s eye. UI/UX is not just aesthetics, it’s how the user feels while using it.  An unique online presence is half succes and essential.</p>
+  <p><strong style="color: aquamarine; font-weight: 800">I aim to create stunning, pixel-perfect things for the web,</strong> combining frontend logic with a designer’s eye. UI/UX is not just about aesthetics; it’s about how users feel while using a product. A unique online presence is essential for success.</p>
  </div>
 	<div class="icon-style">
 <div class="icon icon3"></div>
@@ -223,7 +229,7 @@
 	
 		<div class="title gruppo-regular">Jozsef Jonas</div>
 	<div class="description red-hat-text-font">
-	UI/UX/Designer<br> Hungarian Front End Developer | Protographer</div>
+	UI/UX Designer<br> Hungarian Front End Developer | Photographer</div>
 	
 
 		<div class="nav-border2"></div>
@@ -248,14 +254,14 @@
       <div class="story-text">
 
         <div class="story-step active red-hat-text-font">
-          <h2 class="red-hat-text-font">Hi, my name is Jozsef Jonas, welcome on my portfolio.<br></h2>
-          <p>I am a 33 years old Hungarian | Frontend-focused developer with a passion for<br>
-              UI/UX and smooth user interactions, with 3 + years of experience
+          <h2 class="red-hat-text-font">Hi, my name is Jozsef Jonas. Welcome to my portfolio.<br></h2>
+          <p>I'm a 33-year-old Hungarian developer focused on frontend development. I have a passion for<br>
+              UI/UX and smooth user interactions, and over 3 years of experience.
            </p>
             <br>
             <h2 class="red-hat-text-font">My belief...</h2>
              <p>... that every pixel has a purpose. Every line of code supports the experience.</p>
-             <p>I like turn ideas into clean, modern, and functional web experiences.</p>
+             <p>I like to turn ideas into clean, modern, and functional web experiences.</p>
             <p>I believe in simplicity, clarity, and strong visual impact.</p>
             <br>
              <p>
@@ -292,12 +298,13 @@
 
 </div>
        <div class="story-step red-hat-text-font" id="section4">
-          <h2 class="red-hat-text-font title3">Take a look on my references</h2>
+          <h2 class="red-hat-text-font title3">Take a look at my references</h2>
         		<div class="grid-container-story">
 	<a href="https://dzsozeph.github.io/solarexplorer" target="_blank">
   <div class="mini-site-2">
     <img src="sse.PNG" alt="Site 1">
   </div>
+	</a>
 
                     
                                         	<a href="https://dzsozeph.github.io/" target="_blank">
@@ -322,6 +329,7 @@
   <div class="mini-site-2">
     <img src="wood.png" alt="Site 3">
   </div>
+	</a>
 
             
                           	<a href="" target="_blank">
@@ -342,7 +350,6 @@
     <img src="tam.PNG" alt="Site 7">
   </div>
 	</a>
-             		</a>
     
 
       
@@ -361,8 +368,7 @@
     <img src="tauri.png" alt="Site 2">
   </div>
 		</a>   
-            		</a>
-	<a href="https://dzsozeph.github.io/psychedelicwiki" target="_blank">
+		<a href="https://dzsozeph.github.io/psychedelicwiki" target="_blank">
   <div class="mini-site-2">
     <img src="psychwiki.PNG" alt="Site 4">
   </div>
@@ -397,11 +403,11 @@
                 Looking for a modern<br> and unique solution for your project?
             </h2>
          
-<p>Let’s discuss how I can help bring your vision to life</p>
+<p>Let’s discuss how I can help bring your vision to life.</p>
     <br>
     <p>Whether you have a project idea, a question, or just want to connect<br> — don’t hesitate to contact me.</p>
     <h2 class="red-hat-text-font size">I usually respond within 24 hours.</h2>
-    <p>Your future is now, your online succes is in my hand!</p>
+    <p>Your future is now, your online success is in my hands!</p>
     
     <a href="mailto:dzsozeph93@gmail.com" class="button-contact-2 red-hat-text-font" style="text-decoration: none;">Get in Touch</a>
      </div>
@@ -432,7 +438,7 @@
     
       <li class="red-hat-text-font" style="margin: 0 auto">About me 👋🏽
 		  <div class="content content-text michroma-regular" style="font-size: 14px;">My name is <strong style="color: rgba(140,67,172,1.00); font-size: 20px; font-weight: 800">Jozsef Jonas</strong> <br>
-			32 years old Hungarian <img src="hu.png" alt="html" width="20px"> living in the Netherlands. <img src="nl.png" alt="html" width="20px"><br>
+			I'm a 33-year-old Hungarian living in the Netherlands. <img src="hu.png" alt="Hungarian flag" width="20px"> <img src="nl.png" alt="Dutch flag" width="20px"><br>
 			<br>
 <div class="content2">
 	<div class="icon-style">
@@ -442,7 +448,7 @@
 	<div class="icon-style">
 <div class="icon icon2"></div>
 
-  <p><strong style="color: aquamarine; font-weight: 800">My aim to create pixel precise</strong> stunning things for web, combining frontend logic with a designer’s eye. UI/UX is not just aesthetics, it’s how the user feels while using it.  An unique online presence is half succes and essential.</p>
+  <p><strong style="color: aquamarine; font-weight: 800">My aim is to create pixel-perfect</strong>, stunning things for the web, combining frontend logic with a designer’s eye. UI/UX is not just aesthetics, it’s how the user feels while using it. A unique online presence is essential for success.</p>
  </div>
 	<div class="icon-style">
 <div class="icon icon3"></div>
@@ -521,7 +527,7 @@
 		
 				<div class="experience-list margin">
 					
-					<span class="mobile-title">Technologys what I have worked with</span>
+					<span class="mobile-title">Technologies I've worked with</span>
 			<img src="html2.png" alt="html" width="20px">HTML
 			<img src="css.png" alt="html" width="20px">CSS
 			<img src="js.png" alt="html" width="20px">JAVASCRIPT
@@ -639,7 +645,7 @@
                     <p>Let's discover</p>
                     <h2>The Netherlands</h2>
                     <p>
-                        Crystal clear sandy beaches, romantic citys with canals, and mesmerizing old historical buildings.
+                        Discover crystal-clear sandy beaches, romantic cities with canals, and mesmerizing historic buildings.
                     </p>
 					<span class="flagnl"></span>
                 </div>
@@ -662,7 +668,7 @@
                     <p>Let's discover</p>
                     <h2>Hungary</h2>
                     <p>
-                        The land of poorness, beside rich in nature and gastronomy.
+                        Hungary may be poor, but it is rich in nature and gastronomy.
                     </p>
 					<span class="flaghu"></span>
                 </div>
@@ -673,7 +679,7 @@
                     <p>Let's discover</p>
                     <h2>Slovakia</h2>
                     <p>
-                        Hmm... the Carphatian jeweil, High Tatras, 
+                        The High Tatras are a jewel of the Carpathians.
                     </p>
 					<span class="flagslv"></span>
                 </div>
@@ -1412,6 +1418,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const steps = document.querySelectorAll(".story-step");
 const visuals = document.querySelectorAll(".visual-layer");
+const dots = document.querySelectorAll(".nav-dot");
 
 let current = 0;
 
@@ -1424,52 +1431,113 @@ function setActive(index) {
     vis.classList.toggle("active", i === index);
   });
 
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === index);
+    if (i === index) {
+      dot.setAttribute("aria-current", "step");
+    } else {
+      dot.removeAttribute("aria-current");
+    }
+  });
+
   current = index;
 }
 
-ScrollTrigger.create({
-  trigger: ".story-section",
-  start: "top top",
-  end: "bottom bottom",
-  scrub: true,
-  onUpdate: (self) => {
-    const progress = self.progress;
+setActive(current);
 
-    let stepIndex = Math.floor(progress * steps.length);
+const storyTrigger = ScrollTrigger.create({
+    trigger: ".story-section",
+    start: "top top",
+    end: "bottom top",
+    scrub: 0.5,
 
-    if (stepIndex !== current && stepIndex < steps.length) {
-      current = stepIndex;
-      setActive(stepIndex);
+    invalidateOnRefresh: true,
+
+    onUpdate: (self) => {
+        const progress = self.progress;
+
+        let stepIndex = Math.min(
+            steps.length - 1,
+            Math.floor(progress * steps.length)
+        );
+
+        if (stepIndex !== current) {
+            setActive(stepIndex);
+        }
     }
-  }
 });
 
-    const dots = document.querySelectorAll('.nav-dot');
-const sections = document.querySelectorAll('.section');
-
-function activateDot() {
-  let scrollPos = window.scrollY + window.innerHeight / 2;
-  
-  sections.forEach((section, index) => {
-    if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[index].classList.add('active');
+  gsap.fromTo(".story-container", {
+    autoAlpha: 0,
+    y: 90,
+    rotateX: 10,
+    rotateZ: -1.2,
+    scale: 0.94,
+    filter: "blur(10px)",
+    transformPerspective: 1400,
+    transformOrigin: "50% 0%"
+  }, {
+    autoAlpha: 1,
+    y: 0,
+    rotateX: 0,
+    rotateZ: 0,
+    scale: 1,
+    filter: "blur(0px)",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".story-section",
+      start: "top bottom",
+      end: "top 20%",
+      scrub: 0.8,
+      invalidateOnRefresh: true
     }
   });
-}
 
 dots.forEach(dot => {
   dot.addEventListener('click', () => {
-    const target = document.querySelector(dot.dataset.target);
+    const stepIndex = Number(dot.dataset.stepIndex);
+    const stepProgress = (stepIndex + 0.5) / steps.length;
+    const target = storyTrigger.start + (storyTrigger.end - storyTrigger.start) * stepProgress;
+
     window.scrollTo({
-      top: target.offsetTop,
+      top: target,
       behavior: 'smooth'
     });
   });
 });
 
-window.addEventListener('scroll', activateDot);
-window.addEventListener('load', activateDot);
+const mainSection = document.getElementById('section-main');
+const mainContent = mainSection ? mainSection.querySelector('.main-content') : null;
+
+function updateMainSectionTransition() {
+  if (!mainSection || !mainContent) return;
+
+  const rect = mainSection.getBoundingClientRect();
+  const total = mainSection.offsetHeight - window.innerHeight;
+  const progress = total > 0 ? Math.min(Math.max((-rect.top) / total, 0), 1) : 0;
+
+  const translateY = progress * 140;
+  const scale = 1 - progress * 0.12;
+  const opacity = 1 - progress * 1.25;
+  const blur = progress * 5;
+
+  mainContent.style.transform = `translateY(${translateY}px) scale(${scale})`;
+  mainContent.style.opacity = Math.max(0, opacity).toFixed(3);
+  mainContent.style.filter = `blur(${blur}px)`;
+
+  mainSection.classList.toggle('is-transitioning', progress > 0.02);
+}
+
+window.addEventListener('scroll', updateMainSectionTransition, { passive: true });
+window.addEventListener('load', updateMainSectionTransition);
+window.addEventListener('resize', updateMainSectionTransition);
+
+	window.addEventListener("orientationchange", () => {
+    setTimeout(() => {
+        ScrollTrigger.refresh();
+        updateMainSectionTransition();
+    }, 300);
+});
 </script>
 
 </body>
